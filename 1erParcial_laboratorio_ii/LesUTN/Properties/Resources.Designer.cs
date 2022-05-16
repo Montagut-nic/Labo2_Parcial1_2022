@@ -83,9 +83,29 @@ namespace LesUTN.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logoLogout {
+            get {
+                object obj = ResourceManager.GetObject("logoLogout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoPerfil {
             get {
                 object obj = ResourceManager.GetObject("logoPerfil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoSalir {
+            get {
+                object obj = ResourceManager.GetObject("logoSalir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

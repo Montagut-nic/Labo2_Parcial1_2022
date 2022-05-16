@@ -22,7 +22,7 @@ namespace LesUTN
         {
             if (((Button)sender).Text == "Admin")
             {
-
+                
                 txbNombre.Text = "Don Pepe";
                 txbContrasena.Text = "Pepe2015";
             }
@@ -37,10 +37,14 @@ namespace LesUTN
         {
             if (Sistema.ChequearPassword(txbNombre.Text, txbContrasena.Text))
             {
+                txbNombre.Text = null;
+                txbContrasena.Text = null;
                 lblDatosIncorrectos.Visible = false;
-                MenuPrincipal menu = new MenuPrincipal();
-                menu.Show();
                 this.Hide();
+                MenuPrincipal menu = new MenuPrincipal(); 
+                menu.Owner = this;
+                menu.Show();
+                
             }
             else
             {
@@ -53,12 +57,12 @@ namespace LesUTN
             Sistema.CargarDatos();
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Desea salir?","Cerrar",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes) 
+            if (MessageBox.Show("Desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
-            }            
+            }
         }
     }
 }

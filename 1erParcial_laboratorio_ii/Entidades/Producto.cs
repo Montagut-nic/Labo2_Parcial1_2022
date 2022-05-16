@@ -20,7 +20,7 @@ namespace Entidades
         {
             set 
             {
-                if(!string.IsNullOrEmpty(value))
+                if(!string.IsNullOrWhiteSpace(value))
                 {
                     this.nombre = value; 
                 }

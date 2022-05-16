@@ -6,7 +6,7 @@ namespace Entidades
     public static class Sistema
     {
         private static List<Producto> inventario;
-        private static SortedList<string,Usuario> listaDeUsuarios;
+        private static Dictionary<string,Usuario> listaDeUsuarios;
         public static Usuario usuarioLogueado;
 
         public static bool ChequearPassword(string nombre, string password)
@@ -35,6 +35,28 @@ namespace Entidades
             return true;
         }
 
+        public static void CambiarNombreDelUsuarioLogueado (string nuevoNombre)
+        {
+            Usuario buffer;
+            if (usuarioLogueado.Nombre != nuevoNombre)
+            {
+                buffer = listaDeUsuarios[usuarioLogueado.Nombre];
+                listaDeUsuarios.Remove(usuarioLogueado.Nombre);
+                buffer.Nombre = nuevoNombre;
+                listaDeUsuarios.Add(buffer.Nombre, buffer);
+                usuarioLogueado = listaDeUsuarios[nuevoNombre];
+            }
+        }
+
+        public static void CambiarPasswordDelUsuarioLogueado(string nuevaContrasena)
+        {
+            if (usuarioLogueado.Password != nuevaContrasena)
+            {
+                listaDeUsuarios[usuarioLogueado.Nombre].Password = nuevaContrasena;
+                usuarioLogueado = listaDeUsuarios[usuarioLogueado.Nombre];
+            }
+        }
+
         public static void CargarDatos()
         {
             Usuario a1 = new Administrador("Don Pepe","Pepe2015");
@@ -60,7 +82,7 @@ namespace Entidades
             Producto c7 = new Comida("Ensalada Cesar", 200, 750);
             Producto c8 = new Comida("Hamburguesa completa", 180, 900);
 
-            listaDeUsuarios = new SortedList<string, Usuario>();
+            listaDeUsuarios = new Dictionary<string, Usuario>();
             listaDeUsuarios.Add(a1.Nombre, a1);
             listaDeUsuarios.Add(e1.Nombre, e1);
             listaDeUsuarios.Add(e2.Nombre, e2);

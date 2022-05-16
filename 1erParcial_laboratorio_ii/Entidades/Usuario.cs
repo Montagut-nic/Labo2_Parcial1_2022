@@ -17,7 +17,7 @@ namespace Entidades
         {
             set 
             {
-                if (!string.IsNullOrEmpty(value))
+                if (!string.IsNullOrWhiteSpace(value))
                 {
                     this.password = value;
                 }
@@ -33,7 +33,7 @@ namespace Entidades
         {
             set 
             {
-                if(value.EsSoloLetras() && !string.IsNullOrEmpty(value))
+                if(value.EsSoloLetras() && !string.IsNullOrWhiteSpace(value))
                 {
                     this.nombre = value; 
                 }

@@ -37,7 +37,7 @@
             this.btnAutofillAdmin = new System.Windows.Forms.Button();
             this.btnAutofillEmpleado = new System.Windows.Forms.Button();
             this.lblDatosIncorrectos = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEntrar
@@ -124,16 +124,16 @@
             this.lblDatosIncorrectos.Text = "Nombre de usuario o contrasena incorrectos";
             this.lblDatosIncorrectos.Visible = false;
             // 
-            // btnCerrar
+            // btnSalir
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Silver;
-            this.btnCerrar.Location = new System.Drawing.Point(341, 210);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(94, 29);
-            this.btnCerrar.TabIndex = 8;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnSalir.BackColor = System.Drawing.Color.Silver;
+            this.btnSalir.Location = new System.Drawing.Point(341, 210);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(94, 29);
+            this.btnSalir.TabIndex = 8;
+            this.btnSalir.Text = "Cerrar";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Login
             // 
@@ -141,9 +141,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Salmon;
-            this.ClientSize = new System.Drawing.Size(459, 254);
+            this.ClientSize = new System.Drawing.Size(482, 253);
             this.ControlBox = false;
-            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblDatosIncorrectos);
             this.Controls.Add(this.btnAutofillEmpleado);
             this.Controls.Add(this.btnAutofillAdmin);
@@ -176,6 +176,6 @@
         private System.Windows.Forms.Button btnAutofillAdmin;
         private System.Windows.Forms.Button btnAutofillEmpleado;
         private System.Windows.Forms.Label lblDatosIncorrectos;
-        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

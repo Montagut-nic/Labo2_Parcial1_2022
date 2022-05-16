@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
-            this.gpbPerfil = new System.Windows.Forms.GroupBox();
             this.lblAdvertenciaPerfil = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.txbContrasenaActual = new System.Windows.Forms.TextBox();
@@ -38,30 +37,18 @@
             this.txbNombreNuevo = new System.Windows.Forms.TextBox();
             this.lblSaludo = new System.Windows.Forms.Label();
             this.gpbSecciones = new System.Windows.Forms.GroupBox();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnTickets = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnBar = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
-            this.gpbPerfil.SuspendLayout();
+            this.pnlPerfil = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gpbSecciones.SuspendLayout();
+            this.pnlPerfil.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // gpbPerfil
-            // 
-            this.gpbPerfil.BackColor = System.Drawing.Color.Salmon;
-            this.gpbPerfil.Controls.Add(this.lblAdvertenciaPerfil);
-            this.gpbPerfil.Controls.Add(this.btnActualizar);
-            this.gpbPerfil.Controls.Add(this.txbContrasenaActual);
-            this.gpbPerfil.Controls.Add(this.txbNuevaPassword);
-            this.gpbPerfil.Controls.Add(this.lblActualizarDatos);
-            this.gpbPerfil.Controls.Add(this.txbNombreNuevo);
-            this.gpbPerfil.Controls.Add(this.lblSaludo);
-            this.gpbPerfil.Location = new System.Drawing.Point(0, 153);
-            this.gpbPerfil.Name = "gpbPerfil";
-            this.gpbPerfil.Size = new System.Drawing.Size(863, 404);
-            this.gpbPerfil.TabIndex = 0;
-            this.gpbPerfil.TabStop = false;
             // 
             // lblAdvertenciaPerfil
             // 
@@ -69,7 +56,7 @@
             this.lblAdvertenciaPerfil.BackColor = System.Drawing.Color.Black;
             this.lblAdvertenciaPerfil.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAdvertenciaPerfil.ForeColor = System.Drawing.Color.Red;
-            this.lblAdvertenciaPerfil.Location = new System.Drawing.Point(30, 328);
+            this.lblAdvertenciaPerfil.Location = new System.Drawing.Point(82, 308);
             this.lblAdvertenciaPerfil.Name = "lblAdvertenciaPerfil";
             this.lblAdvertenciaPerfil.Size = new System.Drawing.Size(0, 20);
             this.lblAdvertenciaPerfil.TabIndex = 6;
@@ -78,7 +65,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Enabled = false;
-            this.btnActualizar.Location = new System.Drawing.Point(251, 271);
+            this.btnActualizar.Location = new System.Drawing.Point(432, 243);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(94, 29);
             this.btnActualizar.TabIndex = 5;
@@ -88,8 +75,9 @@
             // 
             // txbContrasenaActual
             // 
-            this.txbContrasenaActual.Location = new System.Drawing.Point(30, 221);
+            this.txbContrasenaActual.Location = new System.Drawing.Point(82, 244);
             this.txbContrasenaActual.Name = "txbContrasenaActual";
+            this.txbContrasenaActual.PasswordChar = '*';
             this.txbContrasenaActual.PlaceholderText = "Ingrese su contrasena actual para confirmar";
             this.txbContrasenaActual.Size = new System.Drawing.Size(315, 27);
             this.txbContrasenaActual.TabIndex = 4;
@@ -97,8 +85,9 @@
             // 
             // txbNuevaPassword
             // 
-            this.txbNuevaPassword.Location = new System.Drawing.Point(30, 176);
+            this.txbNuevaPassword.Location = new System.Drawing.Point(82, 201);
             this.txbNuevaPassword.Name = "txbNuevaPassword";
+            this.txbNuevaPassword.PasswordChar = '*';
             this.txbNuevaPassword.PlaceholderText = "Ingrese una nueva contrasena";
             this.txbNuevaPassword.Size = new System.Drawing.Size(315, 27);
             this.txbNuevaPassword.TabIndex = 3;
@@ -107,7 +96,7 @@
             // 
             this.lblActualizarDatos.AutoSize = true;
             this.lblActualizarDatos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblActualizarDatos.Location = new System.Drawing.Point(30, 91);
+            this.lblActualizarDatos.Location = new System.Drawing.Point(82, 111);
             this.lblActualizarDatos.Name = "lblActualizarDatos";
             this.lblActualizarDatos.Size = new System.Drawing.Size(249, 20);
             this.lblActualizarDatos.TabIndex = 2;
@@ -115,7 +104,7 @@
             // 
             // txbNombreNuevo
             // 
-            this.txbNombreNuevo.Location = new System.Drawing.Point(30, 131);
+            this.txbNombreNuevo.Location = new System.Drawing.Point(82, 156);
             this.txbNombreNuevo.Name = "txbNombreNuevo";
             this.txbNombreNuevo.Size = new System.Drawing.Size(315, 27);
             this.txbNombreNuevo.TabIndex = 1;
@@ -124,7 +113,7 @@
             // 
             this.lblSaludo.AutoSize = true;
             this.lblSaludo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSaludo.Location = new System.Drawing.Point(20, 20);
+            this.lblSaludo.Location = new System.Drawing.Point(82, 26);
             this.lblSaludo.Name = "lblSaludo";
             this.lblSaludo.Size = new System.Drawing.Size(0, 46);
             this.lblSaludo.TabIndex = 0;
@@ -132,16 +121,39 @@
             // gpbSecciones
             // 
             this.gpbSecciones.BackColor = System.Drawing.Color.Brown;
+            this.gpbSecciones.Controls.Add(this.btnSalir);
+            this.gpbSecciones.Controls.Add(this.btnLogout);
             this.gpbSecciones.Controls.Add(this.btnUsuarios);
             this.gpbSecciones.Controls.Add(this.btnTickets);
             this.gpbSecciones.Controls.Add(this.btnStock);
             this.gpbSecciones.Controls.Add(this.btnBar);
             this.gpbSecciones.Controls.Add(this.btnPerfil);
             this.gpbSecciones.Location = new System.Drawing.Point(0, 0);
+            this.gpbSecciones.Margin = new System.Windows.Forms.Padding(0);
             this.gpbSecciones.Name = "gpbSecciones";
-            this.gpbSecciones.Size = new System.Drawing.Size(1382, 147);
+            this.gpbSecciones.Padding = new System.Windows.Forms.Padding(0);
+            this.gpbSecciones.Size = new System.Drawing.Size(1016, 144);
             this.gpbSecciones.TabIndex = 1;
             this.gpbSecciones.TabStop = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Image = global::LesUTN.Properties.Resources.logoSalir;
+            this.btnSalir.Location = new System.Drawing.Point(940, 30);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(50, 50);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Image = global::LesUTN.Properties.Resources.logoLogout;
+            this.btnLogout.Location = new System.Drawing.Point(860, 30);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(50, 50);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnUsuarios
             // 
@@ -155,6 +167,7 @@
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnSecciones_Click);
             // 
             // btnTickets
             // 
@@ -168,6 +181,7 @@
             this.btnTickets.Text = "Tickets";
             this.btnTickets.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTickets.UseVisualStyleBackColor = true;
+            this.btnTickets.Click += new System.EventHandler(this.btnSecciones_Click);
             // 
             // btnStock
             // 
@@ -181,6 +195,7 @@
             this.btnStock.Text = "Stock";
             this.btnStock.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnSecciones_Click);
             // 
             // btnBar
             // 
@@ -194,10 +209,12 @@
             this.btnBar.Text = "Bar";
             this.btnBar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBar.UseVisualStyleBackColor = true;
+            this.btnBar.Click += new System.EventHandler(this.btnSecciones_Click);
             // 
             // btnPerfil
             // 
             this.btnPerfil.AccessibleName = "Perfil";
+            this.btnPerfil.Enabled = false;
             this.btnPerfil.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.Image = global::LesUTN.Properties.Resources.logoPerfil;
@@ -208,29 +225,54 @@
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnSecciones_Click);
+            // 
+            // pnlPerfil
+            // 
+            this.pnlPerfil.Controls.Add(this.lblSaludo);
+            this.pnlPerfil.Controls.Add(this.lblAdvertenciaPerfil);
+            this.pnlPerfil.Controls.Add(this.lblActualizarDatos);
+            this.pnlPerfil.Controls.Add(this.btnActualizar);
+            this.pnlPerfil.Controls.Add(this.txbNombreNuevo);
+            this.pnlPerfil.Controls.Add(this.txbContrasenaActual);
+            this.pnlPerfil.Controls.Add(this.txbNuevaPassword);
+            this.pnlPerfil.Location = new System.Drawing.Point(808, 172);
+            this.pnlPerfil.Name = "pnlPerfil";
+            this.pnlPerfil.Size = new System.Drawing.Size(591, 371);
+            this.pnlPerfil.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(13, 157);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(736, 404);
+            this.panel1.TabIndex = 3;
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Salmon;
-            this.ClientSize = new System.Drawing.Size(1363, 569);
+            this.ClientSize = new System.Drawing.Size(1011, 573);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlPerfil);
             this.Controls.Add(this.gpbSecciones);
-            this.Controls.Add(this.gpbPerfil);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Les UTN - Menu Principal";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
-            this.gpbPerfil.ResumeLayout(false);
-            this.gpbPerfil.PerformLayout();
             this.gpbSecciones.ResumeLayout(false);
+            this.pnlPerfil.ResumeLayout(false);
+            this.pnlPerfil.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gpbPerfil;
         private System.Windows.Forms.Label lblSaludo;
         private System.Windows.Forms.GroupBox gpbSecciones;
         private System.Windows.Forms.Button btnUsuarios;
@@ -244,5 +286,9 @@
         private System.Windows.Forms.TextBox txbContrasenaActual;
         private System.Windows.Forms.TextBox txbNuevaPassword;
         private System.Windows.Forms.Label lblAdvertenciaPerfil;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Panel pnlPerfil;
+        private System.Windows.Forms.Panel panel1;
     }
 }
