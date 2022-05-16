@@ -131,7 +131,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(94, 29);
             this.btnSalir.TabIndex = 8;
-            this.btnSalir.Text = "Cerrar";
+            this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -141,6 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Salmon;
+            this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(482, 253);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);

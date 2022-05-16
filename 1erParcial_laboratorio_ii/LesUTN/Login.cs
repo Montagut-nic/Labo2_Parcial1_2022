@@ -20,9 +20,9 @@ namespace LesUTN
 
         private void btnAutofill_Click(object sender, EventArgs e)
         {
-            if (((Button)sender).Text == "Admin")
-            {
-                
+            Button btnBuffer = (Button)sender;
+            if (btnBuffer.Text == "Admin")
+            {   
                 txbNombre.Text = "Don Pepe";
                 txbContrasena.Text = "Pepe2015";
             }
@@ -42,8 +42,7 @@ namespace LesUTN
                 lblDatosIncorrectos.Visible = false;
                 this.Hide();
                 MenuPrincipal menu = new MenuPrincipal(); 
-                menu.Owner = this;
-                menu.Show();
+                menu.Show(this);
                 
             }
             else

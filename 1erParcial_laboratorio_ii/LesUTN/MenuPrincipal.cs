@@ -20,7 +20,8 @@ namespace LesUTN
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            this.CargarNombre();
+            CargarNombre();
+            SetearTags();
             if(Sistema.usuarioLogueado is Empleado)
             {
 
@@ -94,54 +95,62 @@ namespace LesUTN
 
         private void btnSecciones_Click(object sender, EventArgs e)
         {
-            switch (((Button)sender).Text)
+            Button btnBuffer = (Button)sender;
+            Panel pnlBuffer = (Panel)btnBuffer.Tag;
+
+            btnPerfil.Enabled = true;
+            btnBar.Enabled = true;
+            btnStock.Enabled = true;
+            btnTickets.Enabled = true;
+            btnUsuarios.Enabled = true;
+            btnBuffer.Enabled = false;
+
+            pnlBar.Visible = false;
+            pnlPerfil.Visible = false;
+            pnlBuffer.Visible = true;
+
+        }
+
+        private void SetearTags()
+        {
+            btnMesa1.Tag = lblDisponibilidad1;
+            btnMesa2.Tag = lblDisponibilidad2;
+            btnMesa3.Tag = lblDisponibilidad3;
+            btnMesa4.Tag = lblDisponibilidad4;
+            btnMesa5.Tag = lblDisponibilidad5;
+            btnMesa6.Tag = lblDisponibilidad6;
+            btnMesa7.Tag = lblDisponibilidad7;
+            btnMesa8.Tag = lblDisponibilidad8;
+            btnMesa9.Tag = lblDisponibilidad9;
+            btnMesa10.Tag = lblDisponibilidad10;
+            btnMesa11.Tag = lblDisponibilidad11;
+            btnMesa12.Tag = lblDisponibilidad12;
+            btnMesa13.Tag = lblDisponibilidad13;
+            btnMesa14.Tag = lblDisponibilidad14;
+            btnMesa15.Tag = lblDisponibilidad15;
+            btnBarra1.Tag = lblDisponibilidad16;
+            btnBarra2.Tag = lblDisponibilidad17;
+            btnBarra3.Tag = lblDisponibilidad18;
+            btnBarra4.Tag = lblDisponibilidad19;
+            btnBarra5.Tag = lblDisponibilidad20;
+
+            btnPerfil.Tag = pnlPerfil;
+            btnBar.Tag = pnlBar;
+
+        }
+
+        private void btnBar_Click(object sender, EventArgs e)
+        {
+            Button btnBuffer = (Button)sender;
+            Label lblBuffer = (Label)btnBuffer.Tag;
+            if ( lblBuffer.Text == "Libre")
             {
-                case "Perfil":
-                    btnPerfil.Enabled=false;
-                    btnBar.Enabled = true;
-                    btnStock.Enabled = true;
-                    btnTickets.Enabled = true;
-                    btnUsuarios.Enabled = true;
-
-                    pnlPerfil.Visible = true;
-                    break;
-                case "Bar":
-                    btnPerfil.Enabled = true;
-                    btnBar.Enabled = false;
-                    btnStock.Enabled = true;
-                    btnTickets.Enabled = true;
-                    btnUsuarios.Enabled = true;
-
-                    pnlPerfil.Visible = false;
-                    break;
-                case "Stock":
-                    btnPerfil.Enabled = true;
-                    btnBar.Enabled = true;
-                    btnStock.Enabled = false;
-                    btnTickets.Enabled = true;
-                    btnUsuarios.Enabled = true;
-
-                    pnlPerfil.Visible = false;
-                    break;
-                case "Tickets":
-                    btnPerfil.Enabled = true;
-                    btnBar.Enabled = true;
-                    btnStock.Enabled = true;
-                    btnTickets.Enabled = false;
-                    btnUsuarios.Enabled = true;
-
-                    pnlPerfil.Visible = false;
-                    break;
-                case "Usuarios":
-                    btnPerfil.Enabled = true;
-                    btnBar.Enabled = true;
-                    btnStock.Enabled = true;
-                    btnTickets.Enabled = true;
-                    btnUsuarios.Enabled = false;
-
-                    pnlPerfil.Visible = false;
-                    break;
+                lblBuffer.Text = "Ocupada";
+                lblBuffer.BackColor = Color.Red;
+                MenuPedidos menu = new MenuPedidos();
+                menu.Show(this);
             }
+            
         }
     }
 }

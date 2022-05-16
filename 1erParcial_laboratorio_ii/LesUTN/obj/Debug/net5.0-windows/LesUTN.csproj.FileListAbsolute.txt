@@ -21,3 +21,4 @@ C:\Users\nicom\source\repos\1erParcial_laboratorio_ii\LesUTN\obj\Debug\net5.0-wi
 C:\Users\nicom\source\repos\1erParcial_laboratorio_ii\LesUTN\obj\Debug\net5.0-windows\LesUTN.genruntimeconfig.cache
 C:\Users\nicom\source\repos\1erParcial_laboratorio_ii\LesUTN\obj\Debug\net5.0-windows\ref\LesUTN.dll
 C:\Users\nicom\source\repos\1erParcial_laboratorio_ii\LesUTN\obj\Debug\net5.0-windows\LesUTN.Properties.Resources.resources
+C:\Users\nicom\source\repos\1erParcial_laboratorio_ii\LesUTN\obj\Debug\net5.0-windows\LesUTN.MenuPedidos.resources
