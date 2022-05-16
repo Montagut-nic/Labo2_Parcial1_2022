@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Entidades
 {
@@ -15,10 +17,14 @@ namespace Entidades
             this.Valor = valor;
 
         }
-
-        protected string Nombre 
+        public Producto (string nombre, double valor) : this (nombre, 1, valor)
         {
-            set 
+
+        }
+
+        public string Nombre 
+        {
+            private set 
             {
                 if(!string.IsNullOrWhiteSpace(value))
                 {
@@ -32,9 +38,9 @@ namespace Entidades
             } 
         }
 
-        protected int Cantidad 
+        public int Cantidad 
         {
-            set 
+            internal set 
             {
                 if(value >= 0)
                 {
@@ -47,9 +53,9 @@ namespace Entidades
             }
         }
 
-        protected double Valor
+        public double Valor
         {
-            set
+            protected set
             {
                 if (value >= 0)
                 {
@@ -60,27 +66,30 @@ namespace Entidades
             {
                 return valor;
             }
+            
         }
 
 
         public static List<Producto> operator +(List<Producto> productos, Producto producto)
         {
-            foreach (Producto item in productos)
-            {
-                if(item == producto)
+            if (producto is not null && productos != null) 
+            { 
+                foreach (Producto item in productos)
                 {
-                    item.Cantidad++;
-                    return productos;
+                    if (item == producto)
+                    {
+                        item.Cantidad++;
+                        return productos;
+                    }
                 }
+                productos.Add(producto);
             }
-            
-            productos.Add(producto);
-            return productos;                
+            return productos;
         }
 
         public static bool operator ==(Producto productoA, Producto productoB)
         {
-            return (productoA.GetType() == productoB.GetType() && productoA.ToString() == productoB.ToString());
+            return productoA is not null && productoB is not null && productoA.Nombre == productoB.Nombre;
         }
 
         public static bool operator !=(Producto productoA, Producto productoB)
@@ -88,9 +97,30 @@ namespace Entidades
             return !(productoA == productoB);
         }
 
+        public string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(Nombre);
+            sb.AppendLine($"\t Cantidad: {Cantidad} \t Precio unitario: ${Valor}");
+            return sb.ToString();
+        }
+
         public override string ToString()
         {
             return this.Nombre;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Producto producto &&
+                   Nombre == producto.Nombre &&
+                   obj.GetType() == producto.GetType() &&
+                   obj != null;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(cantidad, nombre, valor, Nombre, Cantidad, Valor);
         }
     }
 }

@@ -88,9 +88,12 @@
             this.btnMesa1 = new System.Windows.Forms.Button();
             this.lblMesas = new System.Windows.Forms.Label();
             this.lblBarra = new System.Windows.Forms.Label();
+            this.pnlStock = new System.Windows.Forms.Panel();
+            this.txbStock = new System.Windows.Forms.TextBox();
             this.gpbSecciones.SuspendLayout();
             this.pnlPerfil.SuspendLayout();
             this.pnlBar.SuspendLayout();
+            this.pnlStock.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAdvertenciaPerfil
@@ -279,7 +282,7 @@
             this.pnlPerfil.Controls.Add(this.txbNombreNuevo);
             this.pnlPerfil.Controls.Add(this.txbContrasenaActual);
             this.pnlPerfil.Controls.Add(this.txbNuevaPassword);
-            this.pnlPerfil.Location = new System.Drawing.Point(808, 172);
+            this.pnlPerfil.Location = new System.Drawing.Point(1353, 190);
             this.pnlPerfil.Name = "pnlPerfil";
             this.pnlPerfil.Size = new System.Drawing.Size(591, 371);
             this.pnlPerfil.TabIndex = 2;
@@ -328,7 +331,7 @@
             this.pnlBar.Controls.Add(this.btnMesa1);
             this.pnlBar.Controls.Add(this.lblMesas);
             this.pnlBar.Controls.Add(this.lblBarra);
-            this.pnlBar.Location = new System.Drawing.Point(13, 147);
+            this.pnlBar.Location = new System.Drawing.Point(68, 698);
             this.pnlBar.Name = "pnlBar";
             this.pnlBar.Size = new System.Drawing.Size(763, 425);
             this.pnlBar.TabIndex = 3;
@@ -337,7 +340,7 @@
             // lblDisponibilidad20
             // 
             this.lblDisponibilidad20.AutoSize = true;
-            this.lblDisponibilidad20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad20.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad20.Location = new System.Drawing.Point(405, 375);
             this.lblDisponibilidad20.Name = "lblDisponibilidad20";
             this.lblDisponibilidad20.Size = new System.Drawing.Size(42, 20);
@@ -347,7 +350,7 @@
             // lblDisponibilidad19
             // 
             this.lblDisponibilidad19.AutoSize = true;
-            this.lblDisponibilidad19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad19.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad19.Location = new System.Drawing.Point(315, 375);
             this.lblDisponibilidad19.Name = "lblDisponibilidad19";
             this.lblDisponibilidad19.Size = new System.Drawing.Size(42, 20);
@@ -357,7 +360,7 @@
             // lblDisponibilidad18
             // 
             this.lblDisponibilidad18.AutoSize = true;
-            this.lblDisponibilidad18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad18.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad18.Location = new System.Drawing.Point(225, 375);
             this.lblDisponibilidad18.Name = "lblDisponibilidad18";
             this.lblDisponibilidad18.Size = new System.Drawing.Size(42, 20);
@@ -367,7 +370,7 @@
             // lblDisponibilidad17
             // 
             this.lblDisponibilidad17.AutoSize = true;
-            this.lblDisponibilidad17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad17.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad17.Location = new System.Drawing.Point(135, 375);
             this.lblDisponibilidad17.Name = "lblDisponibilidad17";
             this.lblDisponibilidad17.Size = new System.Drawing.Size(42, 20);
@@ -377,7 +380,7 @@
             // lblDisponibilidad16
             // 
             this.lblDisponibilidad16.AutoSize = true;
-            this.lblDisponibilidad16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad16.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad16.Location = new System.Drawing.Point(45, 375);
             this.lblDisponibilidad16.Name = "lblDisponibilidad16";
             this.lblDisponibilidad16.Size = new System.Drawing.Size(42, 20);
@@ -387,7 +390,7 @@
             // lblDisponibilidad15
             // 
             this.lblDisponibilidad15.AutoSize = true;
-            this.lblDisponibilidad15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad15.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad15.Location = new System.Drawing.Point(585, 235);
             this.lblDisponibilidad15.Name = "lblDisponibilidad15";
             this.lblDisponibilidad15.Size = new System.Drawing.Size(42, 20);
@@ -397,7 +400,7 @@
             // lblDisponibilidad14
             // 
             this.lblDisponibilidad14.AutoSize = true;
-            this.lblDisponibilidad14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad14.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad14.Location = new System.Drawing.Point(495, 235);
             this.lblDisponibilidad14.Name = "lblDisponibilidad14";
             this.lblDisponibilidad14.Size = new System.Drawing.Size(42, 20);
@@ -407,7 +410,7 @@
             // lblDisponibilidad13
             // 
             this.lblDisponibilidad13.AutoSize = true;
-            this.lblDisponibilidad13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad13.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad13.Location = new System.Drawing.Point(405, 235);
             this.lblDisponibilidad13.Name = "lblDisponibilidad13";
             this.lblDisponibilidad13.Size = new System.Drawing.Size(42, 20);
@@ -417,7 +420,7 @@
             // lblDisponibilidad12
             // 
             this.lblDisponibilidad12.AutoSize = true;
-            this.lblDisponibilidad12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad12.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad12.Location = new System.Drawing.Point(315, 235);
             this.lblDisponibilidad12.Name = "lblDisponibilidad12";
             this.lblDisponibilidad12.Size = new System.Drawing.Size(42, 20);
@@ -427,7 +430,7 @@
             // lblDisponibilidad11
             // 
             this.lblDisponibilidad11.AutoSize = true;
-            this.lblDisponibilidad11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad11.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad11.Location = new System.Drawing.Point(225, 235);
             this.lblDisponibilidad11.Name = "lblDisponibilidad11";
             this.lblDisponibilidad11.Size = new System.Drawing.Size(42, 20);
@@ -437,7 +440,7 @@
             // lblDisponibilidad10
             // 
             this.lblDisponibilidad10.AutoSize = true;
-            this.lblDisponibilidad10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad10.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad10.Location = new System.Drawing.Point(135, 235);
             this.lblDisponibilidad10.Name = "lblDisponibilidad10";
             this.lblDisponibilidad10.Size = new System.Drawing.Size(42, 20);
@@ -447,7 +450,7 @@
             // lblDisponibilidad9
             // 
             this.lblDisponibilidad9.AutoSize = true;
-            this.lblDisponibilidad9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad9.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad9.Location = new System.Drawing.Point(45, 235);
             this.lblDisponibilidad9.Name = "lblDisponibilidad9";
             this.lblDisponibilidad9.Size = new System.Drawing.Size(42, 20);
@@ -457,7 +460,7 @@
             // lblDisponibilidad8
             // 
             this.lblDisponibilidad8.AutoSize = true;
-            this.lblDisponibilidad8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad8.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad8.Location = new System.Drawing.Point(675, 55);
             this.lblDisponibilidad8.Name = "lblDisponibilidad8";
             this.lblDisponibilidad8.Size = new System.Drawing.Size(42, 20);
@@ -467,7 +470,7 @@
             // lblDisponibilidad7
             // 
             this.lblDisponibilidad7.AutoSize = true;
-            this.lblDisponibilidad7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad7.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad7.Location = new System.Drawing.Point(585, 55);
             this.lblDisponibilidad7.Name = "lblDisponibilidad7";
             this.lblDisponibilidad7.Size = new System.Drawing.Size(42, 20);
@@ -477,7 +480,7 @@
             // lblDisponibilidad6
             // 
             this.lblDisponibilidad6.AutoSize = true;
-            this.lblDisponibilidad6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad6.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad6.Location = new System.Drawing.Point(495, 55);
             this.lblDisponibilidad6.Name = "lblDisponibilidad6";
             this.lblDisponibilidad6.Size = new System.Drawing.Size(42, 20);
@@ -487,7 +490,7 @@
             // lblDisponibilidad5
             // 
             this.lblDisponibilidad5.AutoSize = true;
-            this.lblDisponibilidad5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad5.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad5.Location = new System.Drawing.Point(405, 55);
             this.lblDisponibilidad5.Name = "lblDisponibilidad5";
             this.lblDisponibilidad5.Size = new System.Drawing.Size(42, 20);
@@ -497,7 +500,7 @@
             // lblDisponibilidad4
             // 
             this.lblDisponibilidad4.AutoSize = true;
-            this.lblDisponibilidad4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad4.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad4.Location = new System.Drawing.Point(315, 55);
             this.lblDisponibilidad4.Name = "lblDisponibilidad4";
             this.lblDisponibilidad4.Size = new System.Drawing.Size(42, 20);
@@ -507,7 +510,7 @@
             // lblDisponibilidad3
             // 
             this.lblDisponibilidad3.AutoSize = true;
-            this.lblDisponibilidad3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad3.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad3.Location = new System.Drawing.Point(225, 55);
             this.lblDisponibilidad3.Name = "lblDisponibilidad3";
             this.lblDisponibilidad3.Size = new System.Drawing.Size(42, 20);
@@ -517,7 +520,7 @@
             // lblDisponibilidad2
             // 
             this.lblDisponibilidad2.AutoSize = true;
-            this.lblDisponibilidad2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad2.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad2.Location = new System.Drawing.Point(135, 55);
             this.lblDisponibilidad2.Name = "lblDisponibilidad2";
             this.lblDisponibilidad2.Size = new System.Drawing.Size(42, 20);
@@ -527,7 +530,7 @@
             // lblDisponibilidad1
             // 
             this.lblDisponibilidad1.AutoSize = true;
-            this.lblDisponibilidad1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblDisponibilidad1.BackColor = System.Drawing.Color.LawnGreen;
             this.lblDisponibilidad1.Location = new System.Drawing.Point(45, 55);
             this.lblDisponibilidad1.Name = "lblDisponibilidad1";
             this.lblDisponibilidad1.Size = new System.Drawing.Size(42, 20);
@@ -542,6 +545,7 @@
             this.btnBarra5.TabIndex = 21;
             this.btnBarra5.Text = "Barra 5";
             this.btnBarra5.UseVisualStyleBackColor = true;
+            this.btnBarra5.Click += new System.EventHandler(this.btnBar_Click);
             // 
             // btnBarra4
             // 
@@ -551,6 +555,7 @@
             this.btnBarra4.TabIndex = 20;
             this.btnBarra4.Text = "Barra 4";
             this.btnBarra4.UseVisualStyleBackColor = true;
+            this.btnBarra4.Click += new System.EventHandler(this.btnBar_Click);
             // 
             // btnBarra3
             // 
@@ -560,6 +565,7 @@
             this.btnBarra3.TabIndex = 19;
             this.btnBarra3.Text = "Barra 3";
             this.btnBarra3.UseVisualStyleBackColor = true;
+            this.btnBarra3.Click += new System.EventHandler(this.btnBar_Click);
             // 
             // btnBarra2
             // 
@@ -569,6 +575,7 @@
             this.btnBarra2.TabIndex = 18;
             this.btnBarra2.Text = "Barra 2";
             this.btnBarra2.UseVisualStyleBackColor = true;
+            this.btnBarra2.Click += new System.EventHandler(this.btnBar_Click);
             // 
             // btnBarra1
             // 
@@ -578,6 +585,7 @@
             this.btnBarra1.TabIndex = 17;
             this.btnBarra1.Text = "Barra 1";
             this.btnBarra1.UseVisualStyleBackColor = true;
+            this.btnBarra1.Click += new System.EventHandler(this.btnBar_Click);
             // 
             // btnMesa8
             // 
@@ -749,14 +757,33 @@
             this.lblBarra.TabIndex = 0;
             this.lblBarra.Text = "Barra";
             // 
+            // pnlStock
+            // 
+            this.pnlStock.Controls.Add(this.txbStock);
+            this.pnlStock.Location = new System.Drawing.Point(12, 163);
+            this.pnlStock.Name = "pnlStock";
+            this.pnlStock.Size = new System.Drawing.Size(1004, 376);
+            this.pnlStock.TabIndex = 4;
+            // 
+            // txbStock
+            // 
+            this.txbStock.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txbStock.Location = new System.Drawing.Point(18, 20);
+            this.txbStock.Multiline = true;
+            this.txbStock.Name = "txbStock";
+            this.txbStock.ReadOnly = true;
+            this.txbStock.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txbStock.Size = new System.Drawing.Size(528, 335);
+            this.txbStock.TabIndex = 0;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Salmon;
             this.CancelButton = this.btnSalir;
-            this.ClientSize = new System.Drawing.Size(1011, 573);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(1591, 1043);
+            this.Controls.Add(this.pnlStock);
             this.Controls.Add(this.pnlBar);
             this.Controls.Add(this.pnlPerfil);
             this.Controls.Add(this.gpbSecciones);
@@ -772,6 +799,8 @@
             this.pnlPerfil.PerformLayout();
             this.pnlBar.ResumeLayout(false);
             this.pnlBar.PerformLayout();
+            this.pnlStock.ResumeLayout(false);
+            this.pnlStock.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -836,5 +865,7 @@
         private System.Windows.Forms.Button btnBarra3;
         private System.Windows.Forms.Button btnBarra2;
         private System.Windows.Forms.Button btnBarra1;
+        private System.Windows.Forms.Panel pnlStock;
+        private System.Windows.Forms.TextBox txbStock;
     }
 }

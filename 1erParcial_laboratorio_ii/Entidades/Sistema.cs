@@ -5,7 +5,7 @@ namespace Entidades
 {
     public static class Sistema
     {
-        private static List<Producto> inventario;
+        public static List<Producto> inventario;
         private static Dictionary<string,Usuario> listaDeUsuarios;
         public static Usuario usuarioLogueado;
 
@@ -21,6 +21,45 @@ namespace Entidades
             {
                 return false; 
             }
+        }
+
+        public static Producto GetProducto(Producto producto)
+        {
+            if (producto is not null)
+            {
+                foreach (Producto item in inventario)
+                {
+                    if (producto == item)
+                    {
+                        return item;
+                    }
+                }
+            }
+            return null;
+        }
+
+        public static Administrador GetAdministrador()
+        {
+            foreach (Usuario item in listaDeUsuarios.Values)
+            {
+                if (item is Administrador)
+                {
+                    return (Administrador)item;
+                }
+            }
+            return null;
+        }
+
+        public static Empleado GetEmpleado()
+        {
+            foreach (Usuario item in listaDeUsuarios.Values)
+            {
+                if (item is Empleado)
+                {
+                    return (Empleado)item;
+                }
+            }
+            return null;
         }
 
         public static bool EsSoloLetras(this string str)

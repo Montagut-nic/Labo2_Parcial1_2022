@@ -43,7 +43,7 @@
             // btnEntrar
             // 
             this.btnEntrar.BackColor = System.Drawing.Color.Silver;
-            this.btnEntrar.Location = new System.Drawing.Point(182, 210);
+            this.btnEntrar.Location = new System.Drawing.Point(182, 185);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(94, 29);
             this.btnEntrar.TabIndex = 0;
@@ -56,7 +56,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNombre.Location = new System.Drawing.Point(12, 68);
+            this.lblNombre.Location = new System.Drawing.Point(31, 45);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(64, 20);
             this.lblNombre.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblContrasena.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblContrasena.Location = new System.Drawing.Point(12, 144);
+            this.lblContrasena.Location = new System.Drawing.Point(31, 118);
             this.lblContrasena.Name = "lblContrasena";
             this.lblContrasena.Size = new System.Drawing.Size(83, 20);
             this.lblContrasena.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             // txbNombre
             // 
-            this.txbNombre.Location = new System.Drawing.Point(12, 91);
+            this.txbNombre.Location = new System.Drawing.Point(31, 68);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.PlaceholderText = "Ingrese su nombre";
             this.txbNombre.Size = new System.Drawing.Size(264, 27);
@@ -83,7 +83,7 @@
             // 
             // txbContrasena
             // 
-            this.txbContrasena.Location = new System.Drawing.Point(12, 167);
+            this.txbContrasena.Location = new System.Drawing.Point(31, 141);
             this.txbContrasena.Name = "txbContrasena";
             this.txbContrasena.PasswordChar = '*';
             this.txbContrasena.PlaceholderText = "Ingrese su contrasena";
@@ -117,7 +117,7 @@
             this.lblDatosIncorrectos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDatosIncorrectos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDatosIncorrectos.ForeColor = System.Drawing.Color.Red;
-            this.lblDatosIncorrectos.Location = new System.Drawing.Point(12, 25);
+            this.lblDatosIncorrectos.Location = new System.Drawing.Point(12, 9);
             this.lblDatosIncorrectos.Name = "lblDatosIncorrectos";
             this.lblDatosIncorrectos.Size = new System.Drawing.Size(322, 22);
             this.lblDatosIncorrectos.TabIndex = 7;
@@ -127,7 +127,7 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Silver;
-            this.btnSalir.Location = new System.Drawing.Point(341, 210);
+            this.btnSalir.Location = new System.Drawing.Point(341, 185);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(94, 29);
             this.btnSalir.TabIndex = 8;
@@ -142,8 +142,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Salmon;
             this.CancelButton = this.btnSalir;
-            this.ClientSize = new System.Drawing.Size(482, 253);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(482, 233);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblDatosIncorrectos);
             this.Controls.Add(this.btnAutofillEmpleado);

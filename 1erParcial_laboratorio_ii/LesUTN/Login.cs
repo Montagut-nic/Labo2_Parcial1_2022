@@ -20,16 +20,19 @@ namespace LesUTN
 
         private void btnAutofill_Click(object sender, EventArgs e)
         {
+            Usuario usuarioBuffer;
             Button btnBuffer = (Button)sender;
             if (btnBuffer.Text == "Admin")
-            {   
-                txbNombre.Text = "Don Pepe";
-                txbContrasena.Text = "Pepe2015";
+            {
+                usuarioBuffer = Sistema.GetAdministrador();
+                txbNombre.Text = usuarioBuffer.Nombre;
+                txbContrasena.Text = usuarioBuffer.Password;
             }
             else 
             {
-                txbNombre.Text = "Juancito";
-                txbContrasena.Text = "RacingCampeon";
+                usuarioBuffer = Sistema.GetEmpleado();
+                txbNombre.Text = usuarioBuffer.Nombre;
+                txbContrasena.Text = usuarioBuffer.Password;
             }
         }
 
@@ -37,8 +40,8 @@ namespace LesUTN
         {
             if (Sistema.ChequearPassword(txbNombre.Text, txbContrasena.Text))
             {
-                txbNombre.Text = null;
-                txbContrasena.Text = null;
+                txbNombre.Text = string.Empty;
+                txbContrasena.Text = string.Empty;
                 lblDatosIncorrectos.Visible = false;
                 this.Hide();
                 MenuPrincipal menu = new MenuPrincipal(); 

@@ -11,5 +11,10 @@ namespace Entidades
         public Comida(string nombre, int cantidad, double valor) : base(nombre, cantidad, valor)
         {
         }
+
+        public Comida(string nombre, double valor) : base(nombre, 1, valor)
+        {
+
+        }
     }
 }

@@ -136,6 +136,7 @@ namespace LesUTN
 
             btnPerfil.Tag = pnlPerfil;
             btnBar.Tag = pnlBar;
+            btnStock.Tag = pnlStock;
 
         }
 
@@ -147,10 +148,11 @@ namespace LesUTN
             {
                 lblBuffer.Text = "Ocupada";
                 lblBuffer.BackColor = Color.Red;
-                MenuPedidos menu = new MenuPedidos();
-                menu.Show(this);
+                lblBuffer.Tag = new Pedido();
             }
-            
+            MenuPedidos menu = new MenuPedidos(btnBuffer, (Pedido)lblBuffer.Tag);
+            menu.Show(this);
+
         }
     }
 }

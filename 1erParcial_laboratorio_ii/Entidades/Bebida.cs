@@ -11,5 +11,9 @@ namespace Entidades
         public Bebida(string nombre, int cantidad, double valor) : base(nombre, cantidad, valor)
         {
         }
+        public Bebida(string nombre, double valor) : this(nombre, 1, valor)
+        {
+
+        }
     }
 }
