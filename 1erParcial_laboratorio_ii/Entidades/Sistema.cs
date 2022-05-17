@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Entidades
 {
     public static class Sistema
     {
         public static List<Producto> inventario;
-        private static Dictionary<string,Usuario> listaDeUsuarios;
+        public static Dictionary<string,Usuario> listaDeUsuarios;
         public static Usuario usuarioLogueado;
+        public static string facturaciones;
 
         public static bool ChequearPassword(string nombre, string password)
         {
@@ -94,6 +96,16 @@ namespace Entidades
                 listaDeUsuarios[usuarioLogueado.Nombre].Password = nuevaContrasena;
                 usuarioLogueado = listaDeUsuarios[usuarioLogueado.Nombre];
             }
+        }
+
+        public static string MostrarInventario()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (Producto item in inventario)
+            {
+                sb.AppendLine(item.Mostrar());
+            }
+            return sb.ToString();
         }
 
         public static void CargarDatos()

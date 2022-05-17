@@ -163,7 +163,7 @@
             this.rbtCredito.TabStop = true;
             this.rbtCredito.Text = "Credito";
             this.rbtCredito.UseVisualStyleBackColor = true;
-            this.rbtCredito.CheckedChanged += new System.EventHandler(this.ctr_CheckedChanged);
+            this.rbtCredito.CheckedChanged += new System.EventHandler(this.rbtMetodoDePago_CheckedChanged);
             // 
             // rbtDebito
             // 
@@ -175,6 +175,7 @@
             this.rbtDebito.TabStop = true;
             this.rbtDebito.Text = "Debito";
             this.rbtDebito.UseVisualStyleBackColor = true;
+            this.rbtDebito.Enter += new System.EventHandler(this.rbtMetodoDePago_CheckedChanged);
             // 
             // rbtMercadopago
             // 
@@ -186,6 +187,7 @@
             this.rbtMercadopago.TabStop = true;
             this.rbtMercadopago.Text = "Mercadopago";
             this.rbtMercadopago.UseVisualStyleBackColor = true;
+            this.rbtMercadopago.CheckedChanged += new System.EventHandler(this.rbtMetodoDePago_CheckedChanged);
             // 
             // rbtEfectivo
             // 
@@ -197,6 +199,7 @@
             this.rbtEfectivo.TabStop = true;
             this.rbtEfectivo.Text = "Efectivo";
             this.rbtEfectivo.UseVisualStyleBackColor = true;
+            this.rbtEfectivo.CheckedChanged += new System.EventHandler(this.rbtMetodoDePago_CheckedChanged);
             // 
             // chbEstacionamiento
             // 
@@ -208,7 +211,7 @@
             this.chbEstacionamiento.TabIndex = 11;
             this.chbEstacionamiento.Text = "Usa estacionamiento";
             this.chbEstacionamiento.UseVisualStyleBackColor = false;
-            this.chbEstacionamiento.CheckedChanged += new System.EventHandler(this.ctr_CheckedChanged);
+            this.chbEstacionamiento.CheckedChanged += new System.EventHandler(this.chbEstacionamiento_CheckedChanged);
             // 
             // txbOrden
             // 

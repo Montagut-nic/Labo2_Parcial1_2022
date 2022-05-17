@@ -22,11 +22,6 @@ namespace Entidades
             usaEstacionamiento = false;
         }
 
-        public bool EstaVacio()
-        {
-            return productosPedidos.Count == 0;
-        }
-
         public double Total 
         { 
             get 
@@ -88,7 +83,7 @@ namespace Entidades
                 if (productoBuffer is null)
                 {
                     pedido.productosPedidos.Add(producto);
-
+                    productoStock.Cantidad--;
                 }
                 else if (productoStock.Cantidad > 0)
                 {

@@ -45,5 +45,33 @@ namespace Entidades
             }
         }
 
+        public static bool operator ==(Usuario usuarioA, Usuario usuarioB)
+        {
+            return usuarioA.Nombre == usuarioB.Nombre && usuarioA.Password == usuarioB.Password &&usuarioA.GetType() == usuarioB.GetType();
+        }
+
+        public static bool operator !=(Usuario usuarioA, Usuario usuarioB)
+        {
+            return !(usuarioA == usuarioB);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Usuario usuario &&
+                   Nombre == usuario.Nombre &&
+                   Password == usuario.Password &&
+                   obj.GetType() == usuario.GetType() &&
+                   obj != null;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(nombre,Nombre, Password, password);
+        }
+
+        public override string ToString()
+        {
+            return Nombre;
+        }
     }
 }

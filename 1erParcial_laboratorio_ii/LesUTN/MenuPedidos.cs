@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -66,11 +67,33 @@ namespace LesUTN
 
         }
 
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Nro de Orden: {pedido.nroOrden}");
+            sb.AppendLine($"Hora de cierre de cuenta: {System.DateTime.Now}");
+            sb.Append(pedido.Mostrar());
+            if (rbtCredito.Checked)
+            {
+                sb.AppendLine("Recargo del 10% para tarjetas de credito");
+            }
+            sb.AppendLine($"Total: ${total}");
+            sb.AppendLine("-----------------------------------------------------\n");
+            return sb.ToString();
+        }
+
         private void btnCobrar_Click(object sender, EventArgs e)
         {
-            //TODO Al cobrar agregar la orden al richtextbox de Tickets, una forma de hacerlo seria la siguiente
-            //((RichTextBox)this.Owner.Controls.Find("rtbFacturaciones", false)[0]).AppendText
-            labelPedido.Tag = null;
+            if(MessageBox.Show("Desea cerrar la cuenta y cobrar?", "Cobrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) 
+            { 
+                ((RichTextBox)this.Owner.Controls.Find("rtbFacturaciones", true)[0]).AppendText(this.ToString());
+                labelPedido.Tag = null;
+                labelPedido.BackColor= Color.LawnGreen;
+                labelPedido.Text = "Libre";
+                SoundPlayer sonidoCobro = new SoundPlayer(@"..\..\..\..\LesUTN\Resources\efectoSonidoCobro.wav");
+                sonidoCobro.Play();
+                Close();
+            }
         }
 
         
@@ -141,12 +164,6 @@ namespace LesUTN
             }
         }
 
-
-        private void ctr_CheckedChanged(object sender, EventArgs e)
-        {
-            SetearTotal();
-        }
-
         private void ltbProductos_SelectedValueChanged(object sender, EventArgs e)
         {
             Producto productoBuffer = (Producto)ltbProductos.SelectedItem;
@@ -164,7 +181,6 @@ namespace LesUTN
         {
             if (!string.IsNullOrWhiteSpace(txbOrden.Text))
             {
-                btnCobrar.Enabled = true;
                 btnQuitar.Enabled = true;
             }
             else
@@ -177,6 +193,16 @@ namespace LesUTN
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void chbEstacionamiento_CheckedChanged(object sender, EventArgs e)
+        {
+            SetearTotal();
+        }
+        private void rbtMetodoDePago_CheckedChanged(object sender, EventArgs e)
+        {
+            SetearTotal();
+            btnCobrar.Enabled = true;
         }
     }
 }

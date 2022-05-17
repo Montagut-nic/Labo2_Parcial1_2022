@@ -40,7 +40,7 @@ namespace Entidades
 
         public int Cantidad 
         {
-            internal set 
+            set 
             {
                 if(value >= 0)
                 {
@@ -89,7 +89,7 @@ namespace Entidades
 
         public static bool operator ==(Producto productoA, Producto productoB)
         {
-            return productoA is not null && productoB is not null && productoA.Nombre == productoB.Nombre;
+            return productoA.Nombre == productoB.Nombre;
         }
 
         public static bool operator !=(Producto productoA, Producto productoB)

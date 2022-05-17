@@ -89,11 +89,47 @@
             this.lblMesas = new System.Windows.Forms.Label();
             this.lblBarra = new System.Windows.Forms.Label();
             this.pnlStock = new System.Windows.Forms.Panel();
-            this.txbStock = new System.Windows.Forms.TextBox();
+            this.dgvStockInventario = new System.Windows.Forms.DataGridView();
+            this.gpbStockAdministrador = new System.Windows.Forms.GroupBox();
+            this.rbtNuevoProductoEsComida = new System.Windows.Forms.RadioButton();
+            this.rbtNuevoProductoEsBebida = new System.Windows.Forms.RadioButton();
+            this.nudCantidadRellenarStock = new System.Windows.Forms.NumericUpDown();
+            this.lblCantidadRellenarStock = new System.Windows.Forms.Label();
+            this.ltbRellenarProducto = new System.Windows.Forms.ListBox();
+            this.lblRellenarStock = new System.Windows.Forms.Label();
+            this.lblNuevoProductoValor = new System.Windows.Forms.Label();
+            this.nudValorNuevoProducto = new System.Windows.Forms.NumericUpDown();
+            this.lblNuevoProductoCantidad = new System.Windows.Forms.Label();
+            this.nudNuevoProductoCantidad = new System.Windows.Forms.NumericUpDown();
+            this.txbNuevoProductoNombre = new System.Windows.Forms.TextBox();
+            this.lblAgregarNuevoProducto = new System.Windows.Forms.Label();
+            this.btnAgregarNuevoProducto = new System.Windows.Forms.Button();
+            this.btnRellenarStock = new System.Windows.Forms.Button();
+            this.pnlTickets = new System.Windows.Forms.Panel();
+            this.rtbFacturaciones = new System.Windows.Forms.RichTextBox();
+            this.btnGuardarFacturaciones = new System.Windows.Forms.Button();
+            this.lblFacturaciones = new System.Windows.Forms.Label();
+            this.pnlUsuarios = new System.Windows.Forms.Panel();
+            this.ltbUsuarios = new System.Windows.Forms.ListBox();
+            this.lblModificarDatosUsuario = new System.Windows.Forms.Label();
+            this.txbModificarNombre = new System.Windows.Forms.TextBox();
+            this.txbModificarPassword = new System.Windows.Forms.TextBox();
+            this.lblAgregarNuevoUsuario = new System.Windows.Forms.Label();
+            this.btnConfirmarCambios = new System.Windows.Forms.Button();
+            this.txbNombreNuevoUsuario = new System.Windows.Forms.TextBox();
+            this.txbPasswordNuevoUsuario = new System.Windows.Forms.TextBox();
+            this.btnAgregarNuevoUsuario = new System.Windows.Forms.Button();
             this.gpbSecciones.SuspendLayout();
             this.pnlPerfil.SuspendLayout();
             this.pnlBar.SuspendLayout();
             this.pnlStock.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStockInventario)).BeginInit();
+            this.gpbStockAdministrador.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadRellenarStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValorNuevoProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNuevoProductoCantidad)).BeginInit();
+            this.pnlTickets.SuspendLayout();
+            this.pnlUsuarios.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAdvertenciaPerfil
@@ -282,7 +318,7 @@
             this.pnlPerfil.Controls.Add(this.txbNombreNuevo);
             this.pnlPerfil.Controls.Add(this.txbContrasenaActual);
             this.pnlPerfil.Controls.Add(this.txbNuevaPassword);
-            this.pnlPerfil.Location = new System.Drawing.Point(1353, 190);
+            this.pnlPerfil.Location = new System.Drawing.Point(150, 150);
             this.pnlPerfil.Name = "pnlPerfil";
             this.pnlPerfil.Size = new System.Drawing.Size(591, 371);
             this.pnlPerfil.TabIndex = 2;
@@ -331,7 +367,7 @@
             this.pnlBar.Controls.Add(this.btnMesa1);
             this.pnlBar.Controls.Add(this.lblMesas);
             this.pnlBar.Controls.Add(this.lblBarra);
-            this.pnlBar.Location = new System.Drawing.Point(68, 698);
+            this.pnlBar.Location = new System.Drawing.Point(100, 150);
             this.pnlBar.Name = "pnlBar";
             this.pnlBar.Size = new System.Drawing.Size(763, 425);
             this.pnlBar.TabIndex = 3;
@@ -759,30 +795,396 @@
             // 
             // pnlStock
             // 
-            this.pnlStock.Controls.Add(this.txbStock);
-            this.pnlStock.Location = new System.Drawing.Point(12, 163);
+            this.pnlStock.Controls.Add(this.dgvStockInventario);
+            this.pnlStock.Controls.Add(this.gpbStockAdministrador);
+            this.pnlStock.Location = new System.Drawing.Point(0, 150);
             this.pnlStock.Name = "pnlStock";
-            this.pnlStock.Size = new System.Drawing.Size(1004, 376);
+            this.pnlStock.Size = new System.Drawing.Size(1016, 397);
             this.pnlStock.TabIndex = 4;
+            this.pnlStock.Visible = false;
+            this.pnlStock.VisibleChanged += new System.EventHandler(this.pnlStock_VisibleChanged);
             // 
-            // txbStock
+            // dgvStockInventario
             // 
-            this.txbStock.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txbStock.Location = new System.Drawing.Point(18, 20);
-            this.txbStock.Multiline = true;
-            this.txbStock.Name = "txbStock";
-            this.txbStock.ReadOnly = true;
-            this.txbStock.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txbStock.Size = new System.Drawing.Size(528, 335);
-            this.txbStock.TabIndex = 0;
+            this.dgvStockInventario.AllowUserToAddRows = false;
+            this.dgvStockInventario.AllowUserToDeleteRows = false;
+            this.dgvStockInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvStockInventario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvStockInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStockInventario.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvStockInventario.Location = new System.Drawing.Point(12, 27);
+            this.dgvStockInventario.Name = "dgvStockInventario";
+            this.dgvStockInventario.ReadOnly = true;
+            this.dgvStockInventario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvStockInventario.RowTemplate.Height = 29;
+            this.dgvStockInventario.ShowCellErrors = false;
+            this.dgvStockInventario.ShowCellToolTips = false;
+            this.dgvStockInventario.ShowEditingIcon = false;
+            this.dgvStockInventario.ShowRowErrors = false;
+            this.dgvStockInventario.Size = new System.Drawing.Size(413, 344);
+            this.dgvStockInventario.TabIndex = 4;
+            // 
+            // gpbStockAdministrador
+            // 
+            this.gpbStockAdministrador.Controls.Add(this.btnRellenarStock);
+            this.gpbStockAdministrador.Controls.Add(this.rbtNuevoProductoEsComida);
+            this.gpbStockAdministrador.Controls.Add(this.rbtNuevoProductoEsBebida);
+            this.gpbStockAdministrador.Controls.Add(this.nudCantidadRellenarStock);
+            this.gpbStockAdministrador.Controls.Add(this.lblCantidadRellenarStock);
+            this.gpbStockAdministrador.Controls.Add(this.ltbRellenarProducto);
+            this.gpbStockAdministrador.Controls.Add(this.lblRellenarStock);
+            this.gpbStockAdministrador.Controls.Add(this.lblNuevoProductoValor);
+            this.gpbStockAdministrador.Controls.Add(this.nudValorNuevoProducto);
+            this.gpbStockAdministrador.Controls.Add(this.lblNuevoProductoCantidad);
+            this.gpbStockAdministrador.Controls.Add(this.nudNuevoProductoCantidad);
+            this.gpbStockAdministrador.Controls.Add(this.txbNuevoProductoNombre);
+            this.gpbStockAdministrador.Controls.Add(this.lblAgregarNuevoProducto);
+            this.gpbStockAdministrador.Controls.Add(this.btnAgregarNuevoProducto);
+            this.gpbStockAdministrador.Location = new System.Drawing.Point(473, 3);
+            this.gpbStockAdministrador.Name = "gpbStockAdministrador";
+            this.gpbStockAdministrador.Size = new System.Drawing.Size(525, 368);
+            this.gpbStockAdministrador.TabIndex = 3;
+            this.gpbStockAdministrador.TabStop = false;
+            // 
+            // rbtNuevoProductoEsComida
+            // 
+            this.rbtNuevoProductoEsComida.AutoSize = true;
+            this.rbtNuevoProductoEsComida.Location = new System.Drawing.Point(16, 131);
+            this.rbtNuevoProductoEsComida.Name = "rbtNuevoProductoEsComida";
+            this.rbtNuevoProductoEsComida.Size = new System.Drawing.Size(82, 24);
+            this.rbtNuevoProductoEsComida.TabIndex = 13;
+            this.rbtNuevoProductoEsComida.TabStop = true;
+            this.rbtNuevoProductoEsComida.Text = "Comida";
+            this.rbtNuevoProductoEsComida.UseVisualStyleBackColor = true;
+            this.rbtNuevoProductoEsComida.CheckedChanged += new System.EventHandler(this.rbtNuevoProducto_CheckedChanged);
+            // 
+            // rbtNuevoProductoEsBebida
+            // 
+            this.rbtNuevoProductoEsBebida.AutoSize = true;
+            this.rbtNuevoProductoEsBebida.Location = new System.Drawing.Point(16, 101);
+            this.rbtNuevoProductoEsBebida.Name = "rbtNuevoProductoEsBebida";
+            this.rbtNuevoProductoEsBebida.Size = new System.Drawing.Size(77, 24);
+            this.rbtNuevoProductoEsBebida.TabIndex = 12;
+            this.rbtNuevoProductoEsBebida.TabStop = true;
+            this.rbtNuevoProductoEsBebida.Text = "Bebida";
+            this.rbtNuevoProductoEsBebida.UseVisualStyleBackColor = true;
+            this.rbtNuevoProductoEsBebida.CheckedChanged += new System.EventHandler(this.rbtNuevoProducto_CheckedChanged);
+            // 
+            // nudCantidadRellenarStock
+            // 
+            this.nudCantidadRellenarStock.Location = new System.Drawing.Point(97, 302);
+            this.nudCantidadRellenarStock.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.nudCantidadRellenarStock.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudCantidadRellenarStock.Name = "nudCantidadRellenarStock";
+            this.nudCantidadRellenarStock.Size = new System.Drawing.Size(67, 27);
+            this.nudCantidadRellenarStock.TabIndex = 11;
+            this.nudCantidadRellenarStock.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblCantidadRellenarStock
+            // 
+            this.lblCantidadRellenarStock.AutoSize = true;
+            this.lblCantidadRellenarStock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCantidadRellenarStock.Location = new System.Drawing.Point(16, 304);
+            this.lblCantidadRellenarStock.Name = "lblCantidadRellenarStock";
+            this.lblCantidadRellenarStock.Size = new System.Drawing.Size(71, 20);
+            this.lblCantidadRellenarStock.TabIndex = 10;
+            this.lblCantidadRellenarStock.Text = "Cantidad";
+            // 
+            // ltbRellenarProducto
+            // 
+            this.ltbRellenarProducto.FormattingEnabled = true;
+            this.ltbRellenarProducto.ItemHeight = 20;
+            this.ltbRellenarProducto.Location = new System.Drawing.Point(16, 254);
+            this.ltbRellenarProducto.Name = "ltbRellenarProducto";
+            this.ltbRellenarProducto.Size = new System.Drawing.Size(290, 24);
+            this.ltbRellenarProducto.TabIndex = 9;
+            this.ltbRellenarProducto.SelectedValueChanged += new System.EventHandler(this.ltbRellenarProducto_SelectedValueChanged);
+            // 
+            // lblRellenarStock
+            // 
+            this.lblRellenarStock.AutoSize = true;
+            this.lblRellenarStock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblRellenarStock.Location = new System.Drawing.Point(16, 218);
+            this.lblRellenarStock.Name = "lblRellenarStock";
+            this.lblRellenarStock.Size = new System.Drawing.Size(108, 20);
+            this.lblRellenarStock.TabIndex = 8;
+            this.lblRellenarStock.Text = "Rellenar Stock";
+            // 
+            // lblNuevoProductoValor
+            // 
+            this.lblNuevoProductoValor.AutoSize = true;
+            this.lblNuevoProductoValor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNuevoProductoValor.Location = new System.Drawing.Point(430, 37);
+            this.lblNuevoProductoValor.Name = "lblNuevoProductoValor";
+            this.lblNuevoProductoValor.Size = new System.Drawing.Size(45, 20);
+            this.lblNuevoProductoValor.TabIndex = 7;
+            this.lblNuevoProductoValor.Text = "Valor";
+            // 
+            // nudValorNuevoProducto
+            // 
+            this.nudValorNuevoProducto.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudValorNuevoProducto.InterceptArrowKeys = false;
+            this.nudValorNuevoProducto.Location = new System.Drawing.Point(415, 60);
+            this.nudValorNuevoProducto.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudValorNuevoProducto.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudValorNuevoProducto.Name = "nudValorNuevoProducto";
+            this.nudValorNuevoProducto.Size = new System.Drawing.Size(102, 27);
+            this.nudValorNuevoProducto.TabIndex = 6;
+            this.nudValorNuevoProducto.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblNuevoProductoCantidad
+            // 
+            this.lblNuevoProductoCantidad.AutoSize = true;
+            this.lblNuevoProductoCantidad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNuevoProductoCantidad.Location = new System.Drawing.Point(297, 37);
+            this.lblNuevoProductoCantidad.Name = "lblNuevoProductoCantidad";
+            this.lblNuevoProductoCantidad.Size = new System.Drawing.Size(71, 20);
+            this.lblNuevoProductoCantidad.TabIndex = 5;
+            this.lblNuevoProductoCantidad.Text = "Cantidad";
+            // 
+            // nudNuevoProductoCantidad
+            // 
+            this.nudNuevoProductoCantidad.Location = new System.Drawing.Point(297, 60);
+            this.nudNuevoProductoCantidad.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.nudNuevoProductoCantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudNuevoProductoCantidad.Name = "nudNuevoProductoCantidad";
+            this.nudNuevoProductoCantidad.Size = new System.Drawing.Size(67, 27);
+            this.nudNuevoProductoCantidad.TabIndex = 4;
+            this.nudNuevoProductoCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // txbNuevoProductoNombre
+            // 
+            this.txbNuevoProductoNombre.Location = new System.Drawing.Point(16, 59);
+            this.txbNuevoProductoNombre.Name = "txbNuevoProductoNombre";
+            this.txbNuevoProductoNombre.PlaceholderText = "Ingrese nombre del producto";
+            this.txbNuevoProductoNombre.Size = new System.Drawing.Size(252, 27);
+            this.txbNuevoProductoNombre.TabIndex = 3;
+            // 
+            // lblAgregarNuevoProducto
+            // 
+            this.lblAgregarNuevoProducto.AutoSize = true;
+            this.lblAgregarNuevoProducto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAgregarNuevoProducto.Location = new System.Drawing.Point(16, 23);
+            this.lblAgregarNuevoProducto.Name = "lblAgregarNuevoProducto";
+            this.lblAgregarNuevoProducto.Size = new System.Drawing.Size(184, 20);
+            this.lblAgregarNuevoProducto.TabIndex = 2;
+            this.lblAgregarNuevoProducto.Text = "Agregar Nuevo Producto";
+            // 
+            // btnAgregarNuevoProducto
+            // 
+            this.btnAgregarNuevoProducto.Enabled = false;
+            this.btnAgregarNuevoProducto.Location = new System.Drawing.Point(174, 113);
+            this.btnAgregarNuevoProducto.Name = "btnAgregarNuevoProducto";
+            this.btnAgregarNuevoProducto.Size = new System.Drawing.Size(94, 29);
+            this.btnAgregarNuevoProducto.TabIndex = 1;
+            this.btnAgregarNuevoProducto.Text = "Agregar";
+            this.btnAgregarNuevoProducto.UseVisualStyleBackColor = true;
+            this.btnAgregarNuevoProducto.Click += new System.EventHandler(this.btnAgregarNuevoProducto_Click);
+            // 
+            // btnRellenarStock
+            // 
+            this.btnRellenarStock.Enabled = false;
+            this.btnRellenarStock.Location = new System.Drawing.Point(212, 302);
+            this.btnRellenarStock.Name = "btnRellenarStock";
+            this.btnRellenarStock.Size = new System.Drawing.Size(94, 29);
+            this.btnRellenarStock.TabIndex = 14;
+            this.btnRellenarStock.Text = "Confirmar";
+            this.btnRellenarStock.UseVisualStyleBackColor = true;
+            this.btnRellenarStock.Click += new System.EventHandler(this.btnRellenarStock_Click);
+            // 
+            // pnlTickets
+            // 
+            this.pnlTickets.Controls.Add(this.lblFacturaciones);
+            this.pnlTickets.Controls.Add(this.btnGuardarFacturaciones);
+            this.pnlTickets.Controls.Add(this.rtbFacturaciones);
+            this.pnlTickets.Location = new System.Drawing.Point(100, 150);
+            this.pnlTickets.Name = "pnlTickets";
+            this.pnlTickets.Size = new System.Drawing.Size(844, 456);
+            this.pnlTickets.TabIndex = 5;
+            this.pnlTickets.Visible = false;
+            // 
+            // rtbFacturaciones
+            // 
+            this.rtbFacturaciones.Location = new System.Drawing.Point(161, 18);
+            this.rtbFacturaciones.Name = "rtbFacturaciones";
+            this.rtbFacturaciones.ReadOnly = true;
+            this.rtbFacturaciones.Size = new System.Drawing.Size(657, 417);
+            this.rtbFacturaciones.TabIndex = 0;
+            this.rtbFacturaciones.Text = "";
+            // 
+            // btnGuardarFacturaciones
+            // 
+            this.btnGuardarFacturaciones.Location = new System.Drawing.Point(21, 342);
+            this.btnGuardarFacturaciones.Name = "btnGuardarFacturaciones";
+            this.btnGuardarFacturaciones.Size = new System.Drawing.Size(113, 58);
+            this.btnGuardarFacturaciones.TabIndex = 1;
+            this.btnGuardarFacturaciones.Text = "Guardar Facturaciones";
+            this.btnGuardarFacturaciones.UseVisualStyleBackColor = true;
+            this.btnGuardarFacturaciones.Click += new System.EventHandler(this.btnGuardarFacturaciones_Click);
+            // 
+            // lblFacturaciones
+            // 
+            this.lblFacturaciones.AutoSize = true;
+            this.lblFacturaciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFacturaciones.Location = new System.Drawing.Point(14, 18);
+            this.lblFacturaciones.Name = "lblFacturaciones";
+            this.lblFacturaciones.Size = new System.Drawing.Size(141, 28);
+            this.lblFacturaciones.TabIndex = 2;
+            this.lblFacturaciones.Text = "Facturaciones";
+            // 
+            // pnlUsuarios
+            // 
+            this.pnlUsuarios.Controls.Add(this.btnAgregarNuevoUsuario);
+            this.pnlUsuarios.Controls.Add(this.txbPasswordNuevoUsuario);
+            this.pnlUsuarios.Controls.Add(this.txbNombreNuevoUsuario);
+            this.pnlUsuarios.Controls.Add(this.btnConfirmarCambios);
+            this.pnlUsuarios.Controls.Add(this.lblAgregarNuevoUsuario);
+            this.pnlUsuarios.Controls.Add(this.txbModificarPassword);
+            this.pnlUsuarios.Controls.Add(this.txbModificarNombre);
+            this.pnlUsuarios.Controls.Add(this.lblModificarDatosUsuario);
+            this.pnlUsuarios.Controls.Add(this.ltbUsuarios);
+            this.pnlUsuarios.Location = new System.Drawing.Point(0, 150);
+            this.pnlUsuarios.Name = "pnlUsuarios";
+            this.pnlUsuarios.Size = new System.Drawing.Size(990, 338);
+            this.pnlUsuarios.TabIndex = 6;
+            this.pnlUsuarios.Visible = false;
+            // 
+            // ltbUsuarios
+            // 
+            this.ltbUsuarios.FormattingEnabled = true;
+            this.ltbUsuarios.ItemHeight = 20;
+            this.ltbUsuarios.Location = new System.Drawing.Point(3, 12);
+            this.ltbUsuarios.Name = "ltbUsuarios";
+            this.ltbUsuarios.Size = new System.Drawing.Size(240, 224);
+            this.ltbUsuarios.TabIndex = 0;
+            this.ltbUsuarios.SelectedValueChanged += new System.EventHandler(this.txbModificarNombreOPassword_TextChanged);
+            // 
+            // lblModificarDatosUsuario
+            // 
+            this.lblModificarDatosUsuario.AutoSize = true;
+            this.lblModificarDatosUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblModificarDatosUsuario.Location = new System.Drawing.Point(264, 24);
+            this.lblModificarDatosUsuario.Name = "lblModificarDatosUsuario";
+            this.lblModificarDatosUsuario.Size = new System.Drawing.Size(273, 28);
+            this.lblModificarDatosUsuario.TabIndex = 1;
+            this.lblModificarDatosUsuario.Text = "Modificar datos del usuario";
+            // 
+            // txbModificarNombre
+            // 
+            this.txbModificarNombre.Location = new System.Drawing.Point(264, 73);
+            this.txbModificarNombre.Name = "txbModificarNombre";
+            this.txbModificarNombre.PlaceholderText = "Ingrese nuevo nombre";
+            this.txbModificarNombre.Size = new System.Drawing.Size(273, 27);
+            this.txbModificarNombre.TabIndex = 2;
+            this.txbModificarNombre.TextChanged += new System.EventHandler(this.txbModificarNombreOPassword_TextChanged);
+            // 
+            // txbModificarPassword
+            // 
+            this.txbModificarPassword.Location = new System.Drawing.Point(264, 117);
+            this.txbModificarPassword.Name = "txbModificarPassword";
+            this.txbModificarPassword.PasswordChar = '*';
+            this.txbModificarPassword.PlaceholderText = "Ingrese nueva contrasena";
+            this.txbModificarPassword.Size = new System.Drawing.Size(273, 27);
+            this.txbModificarPassword.TabIndex = 3;
+            this.txbModificarPassword.TextChanged += new System.EventHandler(this.txbModificarNombreOPassword_TextChanged);
+            // 
+            // lblAgregarNuevoUsuario
+            // 
+            this.lblAgregarNuevoUsuario.AutoSize = true;
+            this.lblAgregarNuevoUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAgregarNuevoUsuario.Location = new System.Drawing.Point(698, 24);
+            this.lblAgregarNuevoUsuario.Name = "lblAgregarNuevoUsuario";
+            this.lblAgregarNuevoUsuario.Size = new System.Drawing.Size(228, 28);
+            this.lblAgregarNuevoUsuario.TabIndex = 4;
+            this.lblAgregarNuevoUsuario.Text = "Agregar nuevo usuario";
+            // 
+            // btnConfirmarCambios
+            // 
+            this.btnConfirmarCambios.Enabled = false;
+            this.btnConfirmarCambios.Location = new System.Drawing.Point(443, 164);
+            this.btnConfirmarCambios.Name = "btnConfirmarCambios";
+            this.btnConfirmarCambios.Size = new System.Drawing.Size(94, 29);
+            this.btnConfirmarCambios.TabIndex = 5;
+            this.btnConfirmarCambios.Text = "Confirmar";
+            this.btnConfirmarCambios.UseVisualStyleBackColor = true;
+            this.btnConfirmarCambios.Click += new System.EventHandler(this.btnConfirmarCambios_Click);
+            // 
+            // txbNombreNuevoUsuario
+            // 
+            this.txbNombreNuevoUsuario.Location = new System.Drawing.Point(698, 73);
+            this.txbNombreNuevoUsuario.Name = "txbNombreNuevoUsuario";
+            this.txbNombreNuevoUsuario.PlaceholderText = "Ingrese un nombre";
+            this.txbNombreNuevoUsuario.Size = new System.Drawing.Size(273, 27);
+            this.txbNombreNuevoUsuario.TabIndex = 6;
+            // 
+            // txbPasswordNuevoUsuario
+            // 
+            this.txbPasswordNuevoUsuario.Location = new System.Drawing.Point(698, 117);
+            this.txbPasswordNuevoUsuario.Name = "txbPasswordNuevoUsuario";
+            this.txbPasswordNuevoUsuario.PasswordChar = '*';
+            this.txbPasswordNuevoUsuario.PlaceholderText = "Ingrese una contrasena";
+            this.txbPasswordNuevoUsuario.Size = new System.Drawing.Size(273, 27);
+            this.txbPasswordNuevoUsuario.TabIndex = 7;
+            // 
+            // btnAgregarNuevoUsuario
+            // 
+            this.btnAgregarNuevoUsuario.Enabled = false;
+            this.btnAgregarNuevoUsuario.Location = new System.Drawing.Point(698, 164);
+            this.btnAgregarNuevoUsuario.Name = "btnAgregarNuevoUsuario";
+            this.btnAgregarNuevoUsuario.Size = new System.Drawing.Size(94, 29);
+            this.btnAgregarNuevoUsuario.TabIndex = 8;
+            this.btnAgregarNuevoUsuario.Text = "Agregar";
+            this.btnAgregarNuevoUsuario.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Salmon;
+            this.BackColor = System.Drawing.Color.DarkOrange;
             this.CancelButton = this.btnSalir;
-            this.ClientSize = new System.Drawing.Size(1591, 1043);
+            this.ClientSize = new System.Drawing.Size(1013, 612);
+            this.Controls.Add(this.pnlUsuarios);
+            this.Controls.Add(this.pnlTickets);
             this.Controls.Add(this.pnlStock);
             this.Controls.Add(this.pnlBar);
             this.Controls.Add(this.pnlPerfil);
@@ -793,6 +1195,7 @@
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Les UTN - Menu Principal";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.gpbSecciones.ResumeLayout(false);
             this.pnlPerfil.ResumeLayout(false);
@@ -800,7 +1203,16 @@
             this.pnlBar.ResumeLayout(false);
             this.pnlBar.PerformLayout();
             this.pnlStock.ResumeLayout(false);
-            this.pnlStock.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStockInventario)).EndInit();
+            this.gpbStockAdministrador.ResumeLayout(false);
+            this.gpbStockAdministrador.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidadRellenarStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValorNuevoProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNuevoProductoCantidad)).EndInit();
+            this.pnlTickets.ResumeLayout(false);
+            this.pnlTickets.PerformLayout();
+            this.pnlUsuarios.ResumeLayout(false);
+            this.pnlUsuarios.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -866,6 +1278,35 @@
         private System.Windows.Forms.Button btnBarra2;
         private System.Windows.Forms.Button btnBarra1;
         private System.Windows.Forms.Panel pnlStock;
-        private System.Windows.Forms.TextBox txbStock;
+        private System.Windows.Forms.GroupBox gpbStockAdministrador;
+        private System.Windows.Forms.Label lblNuevoProductoValor;
+        private System.Windows.Forms.NumericUpDown nudValorNuevoProducto;
+        private System.Windows.Forms.Label lblNuevoProductoCantidad;
+        private System.Windows.Forms.NumericUpDown nudNuevoProductoCantidad;
+        private System.Windows.Forms.TextBox txbNuevoProductoNombre;
+        private System.Windows.Forms.Label lblAgregarNuevoProducto;
+        private System.Windows.Forms.Button btnAgregarNuevoProducto;
+        private System.Windows.Forms.NumericUpDown nudCantidadRellenarStock;
+        private System.Windows.Forms.Label lblCantidadRellenarStock;
+        private System.Windows.Forms.ListBox ltbRellenarProducto;
+        private System.Windows.Forms.Label lblRellenarStock;
+        private System.Windows.Forms.DataGridView dgvStockInventario;
+        private System.Windows.Forms.RadioButton rbtNuevoProductoEsBebida;
+        private System.Windows.Forms.RadioButton rbtNuevoProductoEsComida;
+        private System.Windows.Forms.Button btnRellenarStock;
+        private System.Windows.Forms.Panel pnlTickets;
+        private System.Windows.Forms.Label lblFacturaciones;
+        private System.Windows.Forms.Button btnGuardarFacturaciones;
+        private System.Windows.Forms.RichTextBox rtbFacturaciones;
+        private System.Windows.Forms.Panel pnlUsuarios;
+        private System.Windows.Forms.ListBox ltbUsuarios;
+        private System.Windows.Forms.TextBox txbModificarNombre;
+        private System.Windows.Forms.Label lblModificarDatosUsuario;
+        private System.Windows.Forms.Button btnAgregarNuevoUsuario;
+        private System.Windows.Forms.TextBox txbPasswordNuevoUsuario;
+        private System.Windows.Forms.TextBox txbNombreNuevoUsuario;
+        private System.Windows.Forms.Button btnConfirmarCambios;
+        private System.Windows.Forms.Label lblAgregarNuevoUsuario;
+        private System.Windows.Forms.TextBox txbModificarPassword;
     }
 }
