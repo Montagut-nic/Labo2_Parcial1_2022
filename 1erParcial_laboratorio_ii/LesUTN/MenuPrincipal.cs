@@ -189,7 +189,7 @@ namespace LesUTN
 
         }
 
-        private void btnBar_Click(object sender, EventArgs e)
+        private void btnBarMesasYBarra_Click(object sender, EventArgs e)
         {
             Button btnBuffer = (Button)sender;
             Label lblBuffer = (Label)btnBuffer.Tag;
