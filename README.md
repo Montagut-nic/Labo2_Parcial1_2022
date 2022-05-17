@@ -53,6 +53,7 @@ Se sobrecargaron metodos, se sobrecargaron operadores y constructores
 
 ### Propiedades
 Se utilizaron propiedades
+
 ![image](https://user-images.githubusercontent.com/70229188/168897102-a85e44b4-b4eb-4105-b43e-345299051b28.png)
 
 
