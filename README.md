@@ -34,6 +34,7 @@ En la seccion tickets todos pueden acceder para ver los cobros realizados, nadie
 
 ### Usuarios
 La seccion usuarios es una seccion unica para el usuario Admin para que pueda agregar o eliminar otros usuarios o modificar sus datos
-![image](https://user-images.githubusercontent.com/70229188/168878315-43360d62-0cb9-4a52-8f13-d88ee06f31ab.png)
+![image](https://user-images.githubusercontent.com/70229188/168882530-ec142e84-3c0a-4d6a-84ff-8f5b97174b9c.png)
+
 
 
