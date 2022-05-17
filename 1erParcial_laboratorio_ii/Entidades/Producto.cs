@@ -113,5 +113,10 @@ namespace Entidades
         {
             return HashCode.Combine(cantidad, nombre, valor, Nombre, Cantidad, Valor);
         }
+
+        public override string ToString()
+        {
+            return Nombre; 
+        }
     }
 }
