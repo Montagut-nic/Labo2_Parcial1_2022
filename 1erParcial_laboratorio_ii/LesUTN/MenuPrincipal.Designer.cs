@@ -110,6 +110,9 @@
             this.btnGuardarFacturaciones = new System.Windows.Forms.Button();
             this.rtbFacturaciones = new System.Windows.Forms.RichTextBox();
             this.pnlUsuarios = new System.Windows.Forms.Panel();
+            this.chbEsAdministrador = new System.Windows.Forms.CheckBox();
+            this.lblEliminarUsuarioSeleccionado = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregarNuevoUsuario = new System.Windows.Forms.Button();
             this.txbPasswordNuevoUsuario = new System.Windows.Forms.TextBox();
             this.txbNombreNuevoUsuario = new System.Windows.Forms.TextBox();
@@ -119,9 +122,6 @@
             this.txbModificarNombre = new System.Windows.Forms.TextBox();
             this.lblModificarDatosUsuario = new System.Windows.Forms.Label();
             this.ltbUsuarios = new System.Windows.Forms.ListBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblEliminarUsuarioSeleccionado = new System.Windows.Forms.Label();
-            this.chbEsAdministrador = new System.Windows.Forms.CheckBox();
             this.gpbSecciones.SuspendLayout();
             this.pnlPerfil.SuspendLayout();
             this.pnlBar.SuspendLayout();
@@ -321,7 +321,7 @@
             this.pnlPerfil.Controls.Add(this.txbNombreNuevo);
             this.pnlPerfil.Controls.Add(this.txbContrasenaActual);
             this.pnlPerfil.Controls.Add(this.txbNuevaPassword);
-            this.pnlPerfil.Location = new System.Drawing.Point(15000, 150);
+            this.pnlPerfil.Location = new System.Drawing.Point(150, 150);
             this.pnlPerfil.Name = "pnlPerfil";
             this.pnlPerfil.Size = new System.Drawing.Size(591, 371);
             this.pnlPerfil.TabIndex = 2;
@@ -370,7 +370,7 @@
             this.pnlBar.Controls.Add(this.btnMesa1);
             this.pnlBar.Controls.Add(this.lblMesas);
             this.pnlBar.Controls.Add(this.lblBarra);
-            this.pnlBar.Location = new System.Drawing.Point(10000, 150);
+            this.pnlBar.Location = new System.Drawing.Point(100, 150);
             this.pnlBar.Name = "pnlBar";
             this.pnlBar.Size = new System.Drawing.Size(763, 425);
             this.pnlBar.TabIndex = 3;
@@ -800,7 +800,7 @@
             // 
             this.pnlStock.Controls.Add(this.dgvStockInventario);
             this.pnlStock.Controls.Add(this.gpbStockAdministrador);
-            this.pnlStock.Location = new System.Drawing.Point(10000, 150);
+            this.pnlStock.Location = new System.Drawing.Point(0, 150);
             this.pnlStock.Name = "pnlStock";
             this.pnlStock.Size = new System.Drawing.Size(1016, 397);
             this.pnlStock.TabIndex = 4;
@@ -845,14 +845,14 @@
             this.gpbStockAdministrador.Controls.Add(this.btnAgregarNuevoProducto);
             this.gpbStockAdministrador.Location = new System.Drawing.Point(473, 3);
             this.gpbStockAdministrador.Name = "gpbStockAdministrador";
-            this.gpbStockAdministrador.Size = new System.Drawing.Size(525, 368);
+            this.gpbStockAdministrador.Size = new System.Drawing.Size(525, 391);
             this.gpbStockAdministrador.TabIndex = 3;
             this.gpbStockAdministrador.TabStop = false;
             // 
             // btnRellenarStock
             // 
             this.btnRellenarStock.Enabled = false;
-            this.btnRellenarStock.Location = new System.Drawing.Point(212, 302);
+            this.btnRellenarStock.Location = new System.Drawing.Point(97, 347);
             this.btnRellenarStock.Name = "btnRellenarStock";
             this.btnRellenarStock.Size = new System.Drawing.Size(94, 29);
             this.btnRellenarStock.TabIndex = 14;
@@ -886,7 +886,7 @@
             // 
             // nudCantidadRellenarStock
             // 
-            this.nudCantidadRellenarStock.Location = new System.Drawing.Point(97, 302);
+            this.nudCantidadRellenarStock.Location = new System.Drawing.Point(108, 252);
             this.nudCantidadRellenarStock.Maximum = new decimal(new int[] {
             300,
             0,
@@ -910,7 +910,7 @@
             // 
             this.lblCantidadRellenarStock.AutoSize = true;
             this.lblCantidadRellenarStock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCantidadRellenarStock.Location = new System.Drawing.Point(16, 304);
+            this.lblCantidadRellenarStock.Location = new System.Drawing.Point(31, 254);
             this.lblCantidadRellenarStock.Name = "lblCantidadRellenarStock";
             this.lblCantidadRellenarStock.Size = new System.Drawing.Size(71, 20);
             this.lblCantidadRellenarStock.TabIndex = 10;
@@ -920,9 +920,9 @@
             // 
             this.ltbRellenarProducto.FormattingEnabled = true;
             this.ltbRellenarProducto.ItemHeight = 20;
-            this.ltbRellenarProducto.Location = new System.Drawing.Point(16, 254);
+            this.ltbRellenarProducto.Location = new System.Drawing.Point(197, 192);
             this.ltbRellenarProducto.Name = "ltbRellenarProducto";
-            this.ltbRellenarProducto.Size = new System.Drawing.Size(290, 24);
+            this.ltbRellenarProducto.Size = new System.Drawing.Size(313, 184);
             this.ltbRellenarProducto.TabIndex = 9;
             this.ltbRellenarProducto.SelectedValueChanged += new System.EventHandler(this.ltbRellenarProducto_SelectedValueChanged);
             // 
@@ -930,7 +930,7 @@
             // 
             this.lblRellenarStock.AutoSize = true;
             this.lblRellenarStock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRellenarStock.Location = new System.Drawing.Point(16, 218);
+            this.lblRellenarStock.Location = new System.Drawing.Point(67, 192);
             this.lblRellenarStock.Name = "lblRellenarStock";
             this.lblRellenarStock.Size = new System.Drawing.Size(108, 20);
             this.lblRellenarStock.TabIndex = 8;
@@ -1040,7 +1040,7 @@
             this.pnlTickets.Controls.Add(this.lblFacturaciones);
             this.pnlTickets.Controls.Add(this.btnGuardarFacturaciones);
             this.pnlTickets.Controls.Add(this.rtbFacturaciones);
-            this.pnlTickets.Location = new System.Drawing.Point(10000, 150);
+            this.pnlTickets.Location = new System.Drawing.Point(100, 150);
             this.pnlTickets.Name = "pnlTickets";
             this.pnlTickets.Size = new System.Drawing.Size(844, 456);
             this.pnlTickets.TabIndex = 5;
@@ -1089,11 +1089,42 @@
             this.pnlUsuarios.Controls.Add(this.txbModificarNombre);
             this.pnlUsuarios.Controls.Add(this.lblModificarDatosUsuario);
             this.pnlUsuarios.Controls.Add(this.ltbUsuarios);
-            this.pnlUsuarios.Location = new System.Drawing.Point(0, 150);
+            this.pnlUsuarios.Location = new System.Drawing.Point(10, 170);
             this.pnlUsuarios.Name = "pnlUsuarios";
             this.pnlUsuarios.Size = new System.Drawing.Size(990, 395);
             this.pnlUsuarios.TabIndex = 6;
             this.pnlUsuarios.Visible = false;
+            // 
+            // chbEsAdministrador
+            // 
+            this.chbEsAdministrador.AutoSize = true;
+            this.chbEsAdministrador.Location = new System.Drawing.Point(829, 164);
+            this.chbEsAdministrador.Name = "chbEsAdministrador";
+            this.chbEsAdministrador.Size = new System.Drawing.Size(142, 24);
+            this.chbEsAdministrador.TabIndex = 11;
+            this.chbEsAdministrador.Text = "es administrador";
+            this.chbEsAdministrador.UseVisualStyleBackColor = true;
+            // 
+            // lblEliminarUsuarioSeleccionado
+            // 
+            this.lblEliminarUsuarioSeleccionado.AutoSize = true;
+            this.lblEliminarUsuarioSeleccionado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEliminarUsuarioSeleccionado.Location = new System.Drawing.Point(12, 257);
+            this.lblEliminarUsuarioSeleccionado.Name = "lblEliminarUsuarioSeleccionado";
+            this.lblEliminarUsuarioSeleccionado.Size = new System.Drawing.Size(294, 28);
+            this.lblEliminarUsuarioSeleccionado.TabIndex = 10;
+            this.lblEliminarUsuarioSeleccionado.Text = "Eliminar usuario seleccionado";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.Location = new System.Drawing.Point(191, 310);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(94, 29);
+            this.btnEliminar.TabIndex = 9;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregarNuevoUsuario
             // 
@@ -1114,6 +1145,7 @@
             this.txbPasswordNuevoUsuario.PlaceholderText = "Ingrese una contrasena";
             this.txbPasswordNuevoUsuario.Size = new System.Drawing.Size(273, 27);
             this.txbPasswordNuevoUsuario.TabIndex = 7;
+            this.txbPasswordNuevoUsuario.TextChanged += new System.EventHandler(this.txbNuevoUsuario_TextChanged);
             // 
             // txbNombreNuevoUsuario
             // 
@@ -1122,6 +1154,7 @@
             this.txbNombreNuevoUsuario.PlaceholderText = "Ingrese un nombre";
             this.txbNombreNuevoUsuario.Size = new System.Drawing.Size(273, 27);
             this.txbNombreNuevoUsuario.TabIndex = 6;
+            this.txbNombreNuevoUsuario.TextChanged += new System.EventHandler(this.txbNuevoUsuario_TextChanged);
             // 
             // btnConfirmarCambios
             // 
@@ -1181,38 +1214,8 @@
             this.ltbUsuarios.Name = "ltbUsuarios";
             this.ltbUsuarios.Size = new System.Drawing.Size(240, 224);
             this.ltbUsuarios.TabIndex = 0;
+            this.ltbUsuarios.SelectedIndexChanged += new System.EventHandler(this.ltbUsuarios_SelectedIndexChanged);
             this.ltbUsuarios.SelectedValueChanged += new System.EventHandler(this.txbModificarNombreOPassword_TextChanged);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(191, 310);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(94, 29);
-            this.btnEliminar.TabIndex = 9;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // lblEliminarUsuarioSeleccionado
-            // 
-            this.lblEliminarUsuarioSeleccionado.AutoSize = true;
-            this.lblEliminarUsuarioSeleccionado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEliminarUsuarioSeleccionado.Location = new System.Drawing.Point(12, 257);
-            this.lblEliminarUsuarioSeleccionado.Name = "lblEliminarUsuarioSeleccionado";
-            this.lblEliminarUsuarioSeleccionado.Size = new System.Drawing.Size(294, 28);
-            this.lblEliminarUsuarioSeleccionado.TabIndex = 10;
-            this.lblEliminarUsuarioSeleccionado.Text = "Eliminar usuario seleccionado";
-            // 
-            // chbEsAdministrador
-            // 
-            this.chbEsAdministrador.AutoSize = true;
-            this.chbEsAdministrador.Location = new System.Drawing.Point(829, 164);
-            this.chbEsAdministrador.Name = "chbEsAdministrador";
-            this.chbEsAdministrador.Size = new System.Drawing.Size(142, 24);
-            this.chbEsAdministrador.TabIndex = 11;
-            this.chbEsAdministrador.Text = "es administrador";
-            this.chbEsAdministrador.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal
             // 

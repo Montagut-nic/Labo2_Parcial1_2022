@@ -11,5 +11,12 @@ namespace Entidades
         public Administrador(string nombre, string password) : base(nombre, password)
         {
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(base.ToString() + ", Administrador.");
+            return sb.ToString();
+        }
     }
 }

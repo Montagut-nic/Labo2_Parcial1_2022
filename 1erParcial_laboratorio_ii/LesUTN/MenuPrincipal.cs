@@ -324,11 +324,30 @@ namespace LesUTN
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if(ltbUsuarios.SelectedItem is not null)
+            if(ltbUsuarios.SelectedItem is not null && 
+                MessageBox.Show("Seguro desea eliminar a este usuario?","Eliminar usuario",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 Sistema.listaDeUsuarios.Remove(((Usuario)ltbUsuarios.SelectedItem).Nombre);
                 CargarltbUsuarios();
             }
+        }
+
+        private void txbNuevoUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrWhiteSpace(txbPasswordNuevoUsuario.Text) &&
+                !string.IsNullOrWhiteSpace(txbNombreNuevoUsuario.Text))
+            {
+                btnAgregarNuevoUsuario.Enabled = true;
+            }
+            else
+            {
+                btnAgregarNuevoUsuario.Enabled = false;
+            }
+        }
+
+        private void ltbUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnEliminar.Enabled = true;
         }
     }
 }
