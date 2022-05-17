@@ -12,21 +12,28 @@ Menu para usuario empleado ![image](https://user-images.githubusercontent.com/70
 
 Menu para usuario administrador ![image](https://user-images.githubusercontent.com/70229188/168861565-accc9339-6fed-4a33-92ab-c17b1f3bcb78.png)
 
+Lo primero que ve un usuario a loguearse es su perfil donde puede cambiar su nombre y/o su contraseñna. El menu principal tiene distintas secciones. Del lado superior derecho del formulario hay dos botones, el mas cercano al borde es para cerrar la aplicacion, el otro es para desloguear la sesion iniciada.
+
 ### Secciones
 
 #### Bar
 
-![image](https://user-images.githubusercontent.com/70229188/168862148-ad489542-3042-4b4b-ac36-679bcd0a2b55.png) ![image](https://user-images.githubusercontent.com/70229188/168862265-2e2e16aa-0259-4fc0-9ac9-8c2bee93f583.png) ![image](https://user-images.githubusercontent.com/70229188/168863299-1882ce68-eb49-4f53-9499-b4ef3a81bc0a.png)
+En la seccion bar se encuentran los botones con los numeros de mesa. Al presionar uno de esos botones se abre un nuevo formulario con un menu para ordenar comida que quedara registrada en el textbox. Si se presiona cancelar orden se puede elegir cerrar la orden sin cobrar, lo que quedo en el textbox si no se quito no se agragara al inventario. Hasta que se cierre la orden sea cobrandola o cancelandola, el label asociado al boton de la mesa cambiara de libre a ocupado
 
-
+![image](https://user-images.githubusercontent.com/70229188/168862148-ad489542-3042-4b4b-ac36-679bcd0a2b55.png) ![image](https://user-images.githubusercontent.com/70229188/168862265-2e2e16aa-0259-4fc0-9ac9-8c2bee93f583.png) ![image](https://user-images.githubusercontent.com/70229188/168875133-f9f30d29-6049-4b05-9eec-534f2401a88d.png)
+ ![image](https://user-images.githubusercontent.com/70229188/168863299-1882ce68-eb49-4f53-9499-b4ef3a81bc0a.png)
 
 ### Stock
+
+En cuanto a la seccion stock, el usuario empleado solo puede acceder para ver que productos estan cerca de acabarse. El usuario admin es el unico que puede agregar nuevos productos o refillear los productos que ya hay en stock
 ![image](https://user-images.githubusercontent.com/70229188/168863742-f7ab55ae-50d8-4318-a43f-261402e23c49.png) ![image](https://user-images.githubusercontent.com/70229188/168863849-aa2dcd9f-6835-45c2-b81f-425d1093cb52.png)
 
-
-
 ### Tickets
+En la seccion tickets todos pueden acceder para ver los cobros realizados, nadie los puede editar, pero se pueden guardar en un archivo.txt presionando en el boton guardar facturaciones 
 ![image](https://user-images.githubusercontent.com/70229188/168863033-271a27e3-5500-4e4c-ba2d-d31b7328dd80.png)
 
 ### Usuarios
+La seccion usuarios es una seccion unica para el usuario Admin para que pueda agregar o eliminar otros usuarios o modificar sus datos
+![image](https://user-images.githubusercontent.com/70229188/168878315-43360d62-0cb9-4a52-8f13-d88ee06f31ab.png)
+
 
