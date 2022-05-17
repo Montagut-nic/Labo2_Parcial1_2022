@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -300,7 +301,7 @@ namespace LesUTN
 
         private void btnGuardarFacturaciones_Click(object sender, EventArgs e)
         {
-
+            File.WriteAllText(@"..\..\..\..\LesUTN\Resources\MisFacturaciones.txt",rtbFacturaciones.Text);
         }
 
         private void btnAgregarNuevoUsuario_Click(object sender, EventArgs e)
