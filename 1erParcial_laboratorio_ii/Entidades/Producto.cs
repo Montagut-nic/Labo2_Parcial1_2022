@@ -17,10 +17,6 @@ namespace Entidades
             this.Valor = valor;
 
         }
-        public Producto (string nombre, double valor) : this (nombre, 1, valor)
-        {
-
-        }
 
         public string Nombre 
         {
@@ -103,11 +99,6 @@ namespace Entidades
             sb.AppendLine(Nombre);
             sb.AppendLine($"\t Cantidad: {Cantidad} \t Precio unitario: ${Valor}");
             return sb.ToString();
-        }
-
-        public override string ToString()
-        {
-            return this.Nombre;
         }
 
         public override bool Equals(object obj)

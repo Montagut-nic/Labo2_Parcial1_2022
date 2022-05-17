@@ -199,7 +199,7 @@ namespace LesUTN
                 lblBuffer.Tag = new Pedido();
             }
             MenuPedidos menu = new MenuPedidos(btnBuffer, (Pedido)lblBuffer.Tag);
-            menu.Show(this);
+            menu.ShowDialog(this);
 
         }
 

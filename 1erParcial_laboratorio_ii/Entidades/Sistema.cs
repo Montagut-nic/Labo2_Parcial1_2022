@@ -98,16 +98,6 @@ namespace Entidades
             }
         }
 
-        public static string MostrarInventario()
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach (Producto item in inventario)
-            {
-                sb.AppendLine(item.Mostrar());
-            }
-            return sb.ToString();
-        }
-
         public static void CargarDatos()
         {
             Usuario a1 = new Administrador("Don Pepe","Pepe2015");

@@ -12,7 +12,7 @@ namespace Entidades
         {
         }
 
-        public Comida(string nombre, double valor) : base(nombre, 1, valor)
+        public Comida(string nombre, double valor) : this(nombre, 1, valor)
         {
 
         }
