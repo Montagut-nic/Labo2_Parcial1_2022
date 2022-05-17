@@ -91,6 +91,7 @@
             this.pnlStock = new System.Windows.Forms.Panel();
             this.dgvStockInventario = new System.Windows.Forms.DataGridView();
             this.gpbStockAdministrador = new System.Windows.Forms.GroupBox();
+            this.btnRellenarStock = new System.Windows.Forms.Button();
             this.rbtNuevoProductoEsComida = new System.Windows.Forms.RadioButton();
             this.rbtNuevoProductoEsBebida = new System.Windows.Forms.RadioButton();
             this.nudCantidadRellenarStock = new System.Windows.Forms.NumericUpDown();
@@ -104,21 +105,23 @@
             this.txbNuevoProductoNombre = new System.Windows.Forms.TextBox();
             this.lblAgregarNuevoProducto = new System.Windows.Forms.Label();
             this.btnAgregarNuevoProducto = new System.Windows.Forms.Button();
-            this.btnRellenarStock = new System.Windows.Forms.Button();
             this.pnlTickets = new System.Windows.Forms.Panel();
-            this.rtbFacturaciones = new System.Windows.Forms.RichTextBox();
-            this.btnGuardarFacturaciones = new System.Windows.Forms.Button();
             this.lblFacturaciones = new System.Windows.Forms.Label();
+            this.btnGuardarFacturaciones = new System.Windows.Forms.Button();
+            this.rtbFacturaciones = new System.Windows.Forms.RichTextBox();
             this.pnlUsuarios = new System.Windows.Forms.Panel();
-            this.ltbUsuarios = new System.Windows.Forms.ListBox();
-            this.lblModificarDatosUsuario = new System.Windows.Forms.Label();
-            this.txbModificarNombre = new System.Windows.Forms.TextBox();
-            this.txbModificarPassword = new System.Windows.Forms.TextBox();
-            this.lblAgregarNuevoUsuario = new System.Windows.Forms.Label();
-            this.btnConfirmarCambios = new System.Windows.Forms.Button();
-            this.txbNombreNuevoUsuario = new System.Windows.Forms.TextBox();
-            this.txbPasswordNuevoUsuario = new System.Windows.Forms.TextBox();
             this.btnAgregarNuevoUsuario = new System.Windows.Forms.Button();
+            this.txbPasswordNuevoUsuario = new System.Windows.Forms.TextBox();
+            this.txbNombreNuevoUsuario = new System.Windows.Forms.TextBox();
+            this.btnConfirmarCambios = new System.Windows.Forms.Button();
+            this.lblAgregarNuevoUsuario = new System.Windows.Forms.Label();
+            this.txbModificarPassword = new System.Windows.Forms.TextBox();
+            this.txbModificarNombre = new System.Windows.Forms.TextBox();
+            this.lblModificarDatosUsuario = new System.Windows.Forms.Label();
+            this.ltbUsuarios = new System.Windows.Forms.ListBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.lblEliminarUsuarioSeleccionado = new System.Windows.Forms.Label();
+            this.chbEsAdministrador = new System.Windows.Forms.CheckBox();
             this.gpbSecciones.SuspendLayout();
             this.pnlPerfil.SuspendLayout();
             this.pnlBar.SuspendLayout();
@@ -318,7 +321,7 @@
             this.pnlPerfil.Controls.Add(this.txbNombreNuevo);
             this.pnlPerfil.Controls.Add(this.txbContrasenaActual);
             this.pnlPerfil.Controls.Add(this.txbNuevaPassword);
-            this.pnlPerfil.Location = new System.Drawing.Point(150, 150);
+            this.pnlPerfil.Location = new System.Drawing.Point(15000, 150);
             this.pnlPerfil.Name = "pnlPerfil";
             this.pnlPerfil.Size = new System.Drawing.Size(591, 371);
             this.pnlPerfil.TabIndex = 2;
@@ -367,7 +370,7 @@
             this.pnlBar.Controls.Add(this.btnMesa1);
             this.pnlBar.Controls.Add(this.lblMesas);
             this.pnlBar.Controls.Add(this.lblBarra);
-            this.pnlBar.Location = new System.Drawing.Point(100, 150);
+            this.pnlBar.Location = new System.Drawing.Point(10000, 150);
             this.pnlBar.Name = "pnlBar";
             this.pnlBar.Size = new System.Drawing.Size(763, 425);
             this.pnlBar.TabIndex = 3;
@@ -797,7 +800,7 @@
             // 
             this.pnlStock.Controls.Add(this.dgvStockInventario);
             this.pnlStock.Controls.Add(this.gpbStockAdministrador);
-            this.pnlStock.Location = new System.Drawing.Point(0, 150);
+            this.pnlStock.Location = new System.Drawing.Point(10000, 150);
             this.pnlStock.Name = "pnlStock";
             this.pnlStock.Size = new System.Drawing.Size(1016, 397);
             this.pnlStock.TabIndex = 4;
@@ -845,6 +848,17 @@
             this.gpbStockAdministrador.Size = new System.Drawing.Size(525, 368);
             this.gpbStockAdministrador.TabIndex = 3;
             this.gpbStockAdministrador.TabStop = false;
+            // 
+            // btnRellenarStock
+            // 
+            this.btnRellenarStock.Enabled = false;
+            this.btnRellenarStock.Location = new System.Drawing.Point(212, 302);
+            this.btnRellenarStock.Name = "btnRellenarStock";
+            this.btnRellenarStock.Size = new System.Drawing.Size(94, 29);
+            this.btnRellenarStock.TabIndex = 14;
+            this.btnRellenarStock.Text = "Confirmar";
+            this.btnRellenarStock.UseVisualStyleBackColor = true;
+            this.btnRellenarStock.Click += new System.EventHandler(this.btnRellenarStock_Click);
             // 
             // rbtNuevoProductoEsComida
             // 
@@ -1021,46 +1035,16 @@
             this.btnAgregarNuevoProducto.UseVisualStyleBackColor = true;
             this.btnAgregarNuevoProducto.Click += new System.EventHandler(this.btnAgregarNuevoProducto_Click);
             // 
-            // btnRellenarStock
-            // 
-            this.btnRellenarStock.Enabled = false;
-            this.btnRellenarStock.Location = new System.Drawing.Point(212, 302);
-            this.btnRellenarStock.Name = "btnRellenarStock";
-            this.btnRellenarStock.Size = new System.Drawing.Size(94, 29);
-            this.btnRellenarStock.TabIndex = 14;
-            this.btnRellenarStock.Text = "Confirmar";
-            this.btnRellenarStock.UseVisualStyleBackColor = true;
-            this.btnRellenarStock.Click += new System.EventHandler(this.btnRellenarStock_Click);
-            // 
             // pnlTickets
             // 
             this.pnlTickets.Controls.Add(this.lblFacturaciones);
             this.pnlTickets.Controls.Add(this.btnGuardarFacturaciones);
             this.pnlTickets.Controls.Add(this.rtbFacturaciones);
-            this.pnlTickets.Location = new System.Drawing.Point(100, 150);
+            this.pnlTickets.Location = new System.Drawing.Point(10000, 150);
             this.pnlTickets.Name = "pnlTickets";
             this.pnlTickets.Size = new System.Drawing.Size(844, 456);
             this.pnlTickets.TabIndex = 5;
             this.pnlTickets.Visible = false;
-            // 
-            // rtbFacturaciones
-            // 
-            this.rtbFacturaciones.Location = new System.Drawing.Point(161, 18);
-            this.rtbFacturaciones.Name = "rtbFacturaciones";
-            this.rtbFacturaciones.ReadOnly = true;
-            this.rtbFacturaciones.Size = new System.Drawing.Size(657, 417);
-            this.rtbFacturaciones.TabIndex = 0;
-            this.rtbFacturaciones.Text = "";
-            // 
-            // btnGuardarFacturaciones
-            // 
-            this.btnGuardarFacturaciones.Location = new System.Drawing.Point(21, 342);
-            this.btnGuardarFacturaciones.Name = "btnGuardarFacturaciones";
-            this.btnGuardarFacturaciones.Size = new System.Drawing.Size(113, 58);
-            this.btnGuardarFacturaciones.TabIndex = 1;
-            this.btnGuardarFacturaciones.Text = "Guardar Facturaciones";
-            this.btnGuardarFacturaciones.UseVisualStyleBackColor = true;
-            this.btnGuardarFacturaciones.Click += new System.EventHandler(this.btnGuardarFacturaciones_Click);
             // 
             // lblFacturaciones
             // 
@@ -1072,8 +1056,30 @@
             this.lblFacturaciones.TabIndex = 2;
             this.lblFacturaciones.Text = "Facturaciones";
             // 
+            // btnGuardarFacturaciones
+            // 
+            this.btnGuardarFacturaciones.Location = new System.Drawing.Point(21, 342);
+            this.btnGuardarFacturaciones.Name = "btnGuardarFacturaciones";
+            this.btnGuardarFacturaciones.Size = new System.Drawing.Size(113, 58);
+            this.btnGuardarFacturaciones.TabIndex = 1;
+            this.btnGuardarFacturaciones.Text = "Guardar Facturaciones";
+            this.btnGuardarFacturaciones.UseVisualStyleBackColor = true;
+            this.btnGuardarFacturaciones.Click += new System.EventHandler(this.btnGuardarFacturaciones_Click);
+            // 
+            // rtbFacturaciones
+            // 
+            this.rtbFacturaciones.Location = new System.Drawing.Point(161, 18);
+            this.rtbFacturaciones.Name = "rtbFacturaciones";
+            this.rtbFacturaciones.ReadOnly = true;
+            this.rtbFacturaciones.Size = new System.Drawing.Size(657, 417);
+            this.rtbFacturaciones.TabIndex = 0;
+            this.rtbFacturaciones.Text = "";
+            // 
             // pnlUsuarios
             // 
+            this.pnlUsuarios.Controls.Add(this.chbEsAdministrador);
+            this.pnlUsuarios.Controls.Add(this.lblEliminarUsuarioSeleccionado);
+            this.pnlUsuarios.Controls.Add(this.btnEliminar);
             this.pnlUsuarios.Controls.Add(this.btnAgregarNuevoUsuario);
             this.pnlUsuarios.Controls.Add(this.txbPasswordNuevoUsuario);
             this.pnlUsuarios.Controls.Add(this.txbNombreNuevoUsuario);
@@ -1085,58 +1091,37 @@
             this.pnlUsuarios.Controls.Add(this.ltbUsuarios);
             this.pnlUsuarios.Location = new System.Drawing.Point(0, 150);
             this.pnlUsuarios.Name = "pnlUsuarios";
-            this.pnlUsuarios.Size = new System.Drawing.Size(990, 338);
+            this.pnlUsuarios.Size = new System.Drawing.Size(990, 395);
             this.pnlUsuarios.TabIndex = 6;
             this.pnlUsuarios.Visible = false;
             // 
-            // ltbUsuarios
+            // btnAgregarNuevoUsuario
             // 
-            this.ltbUsuarios.FormattingEnabled = true;
-            this.ltbUsuarios.ItemHeight = 20;
-            this.ltbUsuarios.Location = new System.Drawing.Point(3, 12);
-            this.ltbUsuarios.Name = "ltbUsuarios";
-            this.ltbUsuarios.Size = new System.Drawing.Size(240, 224);
-            this.ltbUsuarios.TabIndex = 0;
-            this.ltbUsuarios.SelectedValueChanged += new System.EventHandler(this.txbModificarNombreOPassword_TextChanged);
+            this.btnAgregarNuevoUsuario.Enabled = false;
+            this.btnAgregarNuevoUsuario.Location = new System.Drawing.Point(698, 164);
+            this.btnAgregarNuevoUsuario.Name = "btnAgregarNuevoUsuario";
+            this.btnAgregarNuevoUsuario.Size = new System.Drawing.Size(94, 29);
+            this.btnAgregarNuevoUsuario.TabIndex = 8;
+            this.btnAgregarNuevoUsuario.Text = "Agregar";
+            this.btnAgregarNuevoUsuario.UseVisualStyleBackColor = true;
+            this.btnAgregarNuevoUsuario.Click += new System.EventHandler(this.btnAgregarNuevoUsuario_Click);
             // 
-            // lblModificarDatosUsuario
+            // txbPasswordNuevoUsuario
             // 
-            this.lblModificarDatosUsuario.AutoSize = true;
-            this.lblModificarDatosUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblModificarDatosUsuario.Location = new System.Drawing.Point(264, 24);
-            this.lblModificarDatosUsuario.Name = "lblModificarDatosUsuario";
-            this.lblModificarDatosUsuario.Size = new System.Drawing.Size(273, 28);
-            this.lblModificarDatosUsuario.TabIndex = 1;
-            this.lblModificarDatosUsuario.Text = "Modificar datos del usuario";
+            this.txbPasswordNuevoUsuario.Location = new System.Drawing.Point(698, 117);
+            this.txbPasswordNuevoUsuario.Name = "txbPasswordNuevoUsuario";
+            this.txbPasswordNuevoUsuario.PasswordChar = '*';
+            this.txbPasswordNuevoUsuario.PlaceholderText = "Ingrese una contrasena";
+            this.txbPasswordNuevoUsuario.Size = new System.Drawing.Size(273, 27);
+            this.txbPasswordNuevoUsuario.TabIndex = 7;
             // 
-            // txbModificarNombre
+            // txbNombreNuevoUsuario
             // 
-            this.txbModificarNombre.Location = new System.Drawing.Point(264, 73);
-            this.txbModificarNombre.Name = "txbModificarNombre";
-            this.txbModificarNombre.PlaceholderText = "Ingrese nuevo nombre";
-            this.txbModificarNombre.Size = new System.Drawing.Size(273, 27);
-            this.txbModificarNombre.TabIndex = 2;
-            this.txbModificarNombre.TextChanged += new System.EventHandler(this.txbModificarNombreOPassword_TextChanged);
-            // 
-            // txbModificarPassword
-            // 
-            this.txbModificarPassword.Location = new System.Drawing.Point(264, 117);
-            this.txbModificarPassword.Name = "txbModificarPassword";
-            this.txbModificarPassword.PasswordChar = '*';
-            this.txbModificarPassword.PlaceholderText = "Ingrese nueva contrasena";
-            this.txbModificarPassword.Size = new System.Drawing.Size(273, 27);
-            this.txbModificarPassword.TabIndex = 3;
-            this.txbModificarPassword.TextChanged += new System.EventHandler(this.txbModificarNombreOPassword_TextChanged);
-            // 
-            // lblAgregarNuevoUsuario
-            // 
-            this.lblAgregarNuevoUsuario.AutoSize = true;
-            this.lblAgregarNuevoUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAgregarNuevoUsuario.Location = new System.Drawing.Point(698, 24);
-            this.lblAgregarNuevoUsuario.Name = "lblAgregarNuevoUsuario";
-            this.lblAgregarNuevoUsuario.Size = new System.Drawing.Size(228, 28);
-            this.lblAgregarNuevoUsuario.TabIndex = 4;
-            this.lblAgregarNuevoUsuario.Text = "Agregar nuevo usuario";
+            this.txbNombreNuevoUsuario.Location = new System.Drawing.Point(698, 73);
+            this.txbNombreNuevoUsuario.Name = "txbNombreNuevoUsuario";
+            this.txbNombreNuevoUsuario.PlaceholderText = "Ingrese un nombre";
+            this.txbNombreNuevoUsuario.Size = new System.Drawing.Size(273, 27);
+            this.txbNombreNuevoUsuario.TabIndex = 6;
             // 
             // btnConfirmarCambios
             // 
@@ -1149,32 +1134,85 @@
             this.btnConfirmarCambios.UseVisualStyleBackColor = true;
             this.btnConfirmarCambios.Click += new System.EventHandler(this.btnConfirmarCambios_Click);
             // 
-            // txbNombreNuevoUsuario
+            // lblAgregarNuevoUsuario
             // 
-            this.txbNombreNuevoUsuario.Location = new System.Drawing.Point(698, 73);
-            this.txbNombreNuevoUsuario.Name = "txbNombreNuevoUsuario";
-            this.txbNombreNuevoUsuario.PlaceholderText = "Ingrese un nombre";
-            this.txbNombreNuevoUsuario.Size = new System.Drawing.Size(273, 27);
-            this.txbNombreNuevoUsuario.TabIndex = 6;
+            this.lblAgregarNuevoUsuario.AutoSize = true;
+            this.lblAgregarNuevoUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAgregarNuevoUsuario.Location = new System.Drawing.Point(698, 24);
+            this.lblAgregarNuevoUsuario.Name = "lblAgregarNuevoUsuario";
+            this.lblAgregarNuevoUsuario.Size = new System.Drawing.Size(228, 28);
+            this.lblAgregarNuevoUsuario.TabIndex = 4;
+            this.lblAgregarNuevoUsuario.Text = "Agregar nuevo usuario";
             // 
-            // txbPasswordNuevoUsuario
+            // txbModificarPassword
             // 
-            this.txbPasswordNuevoUsuario.Location = new System.Drawing.Point(698, 117);
-            this.txbPasswordNuevoUsuario.Name = "txbPasswordNuevoUsuario";
-            this.txbPasswordNuevoUsuario.PasswordChar = '*';
-            this.txbPasswordNuevoUsuario.PlaceholderText = "Ingrese una contrasena";
-            this.txbPasswordNuevoUsuario.Size = new System.Drawing.Size(273, 27);
-            this.txbPasswordNuevoUsuario.TabIndex = 7;
+            this.txbModificarPassword.Location = new System.Drawing.Point(264, 117);
+            this.txbModificarPassword.Name = "txbModificarPassword";
+            this.txbModificarPassword.PasswordChar = '*';
+            this.txbModificarPassword.PlaceholderText = "Ingrese nueva contrasena";
+            this.txbModificarPassword.Size = new System.Drawing.Size(273, 27);
+            this.txbModificarPassword.TabIndex = 3;
+            this.txbModificarPassword.TextChanged += new System.EventHandler(this.txbModificarNombreOPassword_TextChanged);
             // 
-            // btnAgregarNuevoUsuario
+            // txbModificarNombre
             // 
-            this.btnAgregarNuevoUsuario.Enabled = false;
-            this.btnAgregarNuevoUsuario.Location = new System.Drawing.Point(698, 164);
-            this.btnAgregarNuevoUsuario.Name = "btnAgregarNuevoUsuario";
-            this.btnAgregarNuevoUsuario.Size = new System.Drawing.Size(94, 29);
-            this.btnAgregarNuevoUsuario.TabIndex = 8;
-            this.btnAgregarNuevoUsuario.Text = "Agregar";
-            this.btnAgregarNuevoUsuario.UseVisualStyleBackColor = true;
+            this.txbModificarNombre.Location = new System.Drawing.Point(264, 73);
+            this.txbModificarNombre.Name = "txbModificarNombre";
+            this.txbModificarNombre.PlaceholderText = "Ingrese nuevo nombre";
+            this.txbModificarNombre.Size = new System.Drawing.Size(273, 27);
+            this.txbModificarNombre.TabIndex = 2;
+            this.txbModificarNombre.TextChanged += new System.EventHandler(this.txbModificarNombreOPassword_TextChanged);
+            // 
+            // lblModificarDatosUsuario
+            // 
+            this.lblModificarDatosUsuario.AutoSize = true;
+            this.lblModificarDatosUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblModificarDatosUsuario.Location = new System.Drawing.Point(264, 24);
+            this.lblModificarDatosUsuario.Name = "lblModificarDatosUsuario";
+            this.lblModificarDatosUsuario.Size = new System.Drawing.Size(273, 28);
+            this.lblModificarDatosUsuario.TabIndex = 1;
+            this.lblModificarDatosUsuario.Text = "Modificar datos del usuario";
+            // 
+            // ltbUsuarios
+            // 
+            this.ltbUsuarios.FormattingEnabled = true;
+            this.ltbUsuarios.ItemHeight = 20;
+            this.ltbUsuarios.Location = new System.Drawing.Point(3, 12);
+            this.ltbUsuarios.Name = "ltbUsuarios";
+            this.ltbUsuarios.Size = new System.Drawing.Size(240, 224);
+            this.ltbUsuarios.TabIndex = 0;
+            this.ltbUsuarios.SelectedValueChanged += new System.EventHandler(this.txbModificarNombreOPassword_TextChanged);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.Location = new System.Drawing.Point(191, 310);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(94, 29);
+            this.btnEliminar.TabIndex = 9;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // lblEliminarUsuarioSeleccionado
+            // 
+            this.lblEliminarUsuarioSeleccionado.AutoSize = true;
+            this.lblEliminarUsuarioSeleccionado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEliminarUsuarioSeleccionado.Location = new System.Drawing.Point(12, 257);
+            this.lblEliminarUsuarioSeleccionado.Name = "lblEliminarUsuarioSeleccionado";
+            this.lblEliminarUsuarioSeleccionado.Size = new System.Drawing.Size(294, 28);
+            this.lblEliminarUsuarioSeleccionado.TabIndex = 10;
+            this.lblEliminarUsuarioSeleccionado.Text = "Eliminar usuario seleccionado";
+            // 
+            // chbEsAdministrador
+            // 
+            this.chbEsAdministrador.AutoSize = true;
+            this.chbEsAdministrador.Location = new System.Drawing.Point(829, 164);
+            this.chbEsAdministrador.Name = "chbEsAdministrador";
+            this.chbEsAdministrador.Size = new System.Drawing.Size(142, 24);
+            this.chbEsAdministrador.TabIndex = 11;
+            this.chbEsAdministrador.Text = "es administrador";
+            this.chbEsAdministrador.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal
             // 
@@ -1308,5 +1346,8 @@
         private System.Windows.Forms.Button btnConfirmarCambios;
         private System.Windows.Forms.Label lblAgregarNuevoUsuario;
         private System.Windows.Forms.TextBox txbModificarPassword;
+        private System.Windows.Forms.Label lblEliminarUsuarioSeleccionado;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.CheckBox chbEsAdministrador;
     }
 }

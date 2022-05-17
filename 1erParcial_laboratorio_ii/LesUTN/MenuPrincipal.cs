@@ -302,5 +302,33 @@ namespace LesUTN
         {
 
         }
+
+        private void btnAgregarNuevoUsuario_Click(object sender, EventArgs e)
+        {
+            Usuario usuarioNuevo;
+            if (!string.IsNullOrWhiteSpace(txbNombreNuevoUsuario.Text) 
+                && !string.IsNullOrWhiteSpace(txbPasswordNuevoUsuario.Text) )
+            {
+                if (chbEsAdministrador.Checked)
+                {
+                    usuarioNuevo = new Administrador(txbNombreNuevoUsuario.Text, txbPasswordNuevoUsuario.Text);
+                }
+                else
+                {
+                    usuarioNuevo = new Empleado(txbNombreNuevoUsuario.Text, txbPasswordNuevoUsuario.Text);
+                }
+                Sistema.listaDeUsuarios.Add(usuarioNuevo.Nombre, usuarioNuevo);
+                CargarltbUsuarios();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if(ltbUsuarios.SelectedItem is not null)
+            {
+                Sistema.listaDeUsuarios.Remove(((Usuario)ltbUsuarios.SelectedItem).Nombre);
+                CargarltbUsuarios();
+            }
+        }
     }
 }
