@@ -14,7 +14,7 @@ Menu para usuario administrador ![image](https://user-images.githubusercontent.c
 
 Lo primero que ve un usuario a loguearse es su perfil donde puede cambiar su nombre y/o su contraseñna. El menu principal tiene distintas secciones. Del lado superior derecho del formulario hay dos botones, el mas cercano al borde es para cerrar la aplicacion, el otro es para desloguear la sesion iniciada.
 
-### Secciones
+## Secciones
 
 #### Bar
 
@@ -35,6 +35,31 @@ En la seccion tickets todos pueden acceder para ver los cobros realizados, nadie
 ### Usuarios
 La seccion usuarios es una seccion unica para el usuario Admin para que pueda agregar o eliminar otros usuarios o modificar sus datos
 ![image](https://user-images.githubusercontent.com/70229188/168882530-ec142e84-3c0a-4d6a-84ff-8f5b97174b9c.png)
+
+## Sobre los temas pedidos
+
+### Herencia
+
+
+### Sobrecargas
+Se sobrecargaron metodos, se sobrecargaron operadores y constructores
+
+### Propiedades
+Se utilizaron constructores
+
+### Colecciones
+Se utilizaron por lo menos dos colecciones distintas
+
+### Enumerados
+no hubo enumerados :(
+
+### Formularios Modal
+Se uso un formulario modal
+
+### Clases estaticas
+Se utilizaron clases estaticas, muy util ya que la podia usar en todos los formularios
+
+### Polimorfismo
 
 
 
