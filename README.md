@@ -34,7 +34,7 @@ En la seccion tickets todos pueden acceder para ver los cobros realizados, nadie
 
 ### Usuarios
 La seccion usuarios es una seccion unica para el usuario Admin para que pueda agregar o eliminar otros usuarios o modificar sus datos
-![image](https://user-images.githubusercontent.com/70229188/168882530-ec142e84-3c0a-4d6a-84ff-8f5b97174b9c.png)
+![image](https://user-images.githubusercontent.com/70229188/168896519-45ce288f-b78e-4783-9fa6-2e147f19e6eb.png)
 
 ## Sobre los temas pedidos
 
@@ -43,23 +43,37 @@ La seccion usuarios es una seccion unica para el usuario Admin para que pueda ag
 
 ### Sobrecargas
 Se sobrecargaron metodos, se sobrecargaron operadores y constructores
+![image](https://user-images.githubusercontent.com/70229188/168896732-fb910c05-f49d-48a2-a159-2ff039f3db01.png)
+![image](https://user-images.githubusercontent.com/70229188/168896850-a02cefd9-e3ef-4459-8bc4-c003f46beb9c.png)
+![image](https://user-images.githubusercontent.com/70229188/168896930-49255b00-b1cb-4f70-b88e-e627e3420812.png)
+
 
 ### Propiedades
-Se utilizaron constructores
+Se utilizaron propiedades
+![image](https://user-images.githubusercontent.com/70229188/168897102-a85e44b4-b4eb-4105-b43e-345299051b28.png)
+
 
 ### Colecciones
 Se utilizaron por lo menos dos colecciones distintas
+![image](https://user-images.githubusercontent.com/70229188/168897379-9216480a-72c8-4dcd-bf12-73b23223c64c.png)
+
 
 ### Enumerados
 no hubo enumerados :(
 
 ### Formularios Modal
-Se uso un formulario modal
+Se usaron formularios modal
+![image](https://user-images.githubusercontent.com/70229188/168897566-49dd5523-22bd-4af5-be2e-a83b75e5db59.png)
+![image](https://user-images.githubusercontent.com/70229188/168897708-cd447e37-2486-48e0-8e4c-3421fb76c225.png)
+
 
 ### Clases estaticas
-Se utilizaron clases estaticas, muy util ya que la podia usar en todos los formularios
+Se utilizaron clases estaticas, ver colecciones
 
 ### Polimorfismo
+Se utilizaron clases abstractas
+![image](https://user-images.githubusercontent.com/70229188/168897790-b92432f2-7409-44a2-96f7-63f750b13f5d.png)
+![image](https://user-images.githubusercontent.com/70229188/168897832-2360841a-f641-4cef-90e5-617d22f8d4d0.png)
 
 
 
