@@ -100,53 +100,32 @@ namespace Entidades
 
         public static void CargarDatos()
         {
-            Usuario a1 = new Administrador("Don Pepe","Pepe2015");
-            Usuario e1 = new Empleado("Juancito", "RacingCampeon");
-            Usuario e2 = new Empleado("Esteban", "quito123");
-            Usuario e3 = new Empleado("Nico", "VamosNiubel");
-
-            Producto b1 = new Bebida("Coca Cola 500ml",30,200);
-            Producto b2 = new Bebida("Agua sin gas 500ml",50,190);
-            Producto b3 = new Bebida("Agua con gas 500ml", 50, 190);
-            Producto b4 = new Bebida("Limonada",40,200);
-            Producto b5 = new Bebida("Cerveza 750ml",200,350);
-            Producto b6 = new Bebida("Martini", 70, 600);
-            Producto b7 = new Bebida("Manhattan", 80, 700);
-            Producto b8 = new Bebida("Negroni", 80, 800);
-
-            Producto c1 = new Comida("Papas cheddar",150,700);
-            Producto c2 = new Comida("Rabas",100,1200);
-            Producto c3 = new Comida("Bastones de muzzarella", 100, 750);
-            Producto c4 = new Comida("Quesadillas", 120, 900);
-            Producto c5 = new Comida("Tabla de quesos", 200, 900);
-            Producto c6 = new Comida("Tabla de fiambres", 100, 2200);
-            Producto c7 = new Comida("Ensalada Cesar", 200, 750);
-            Producto c8 = new Comida("Hamburguesa completa", 180, 900);
-
-            listaDeUsuarios = new Dictionary<string, Usuario>();
-            listaDeUsuarios.Add(a1.Nombre, a1);
-            listaDeUsuarios.Add(e1.Nombre, e1);
-            listaDeUsuarios.Add(e2.Nombre, e2);
-            listaDeUsuarios.Add(e3.Nombre, e3);
-
             inventario = new List<Producto>();
-            inventario += b1;
-            inventario += b2;
-            inventario += b3;
-            inventario += b4;
-            inventario += b5;
-            inventario += b6;
-            inventario += b7;
-            inventario += b8;
+            listaDeUsuarios = new Dictionary<string, Usuario>();
 
-            inventario += c1;
-            inventario += c2;
-            inventario += c3;
-            inventario += c4;
-            inventario += c5;
-            inventario += c6;
-            inventario += c7;
-            inventario += c8;
+            listaDeUsuarios.Add("Don Pepe", new Administrador("Don Pepe", "Pepe2015"));
+            listaDeUsuarios.Add("Juancito", new Empleado("Juancito", "RacingCampeon"));
+            listaDeUsuarios.Add("Esteban", new Empleado("Esteban", "quito123"));
+            listaDeUsuarios.Add("Nico", new Empleado("Nico", "VamosNiubel"));
+
+            inventario += new Bebida("Coca Cola 500ml",30,200);
+            inventario += new Bebida("Agua sin gas 500ml",50,190);
+            inventario += new Bebida("Agua con gas 500ml", 50, 190);
+            inventario += new Bebida("Limonada",40,200);
+            inventario += new Bebida("Cerveza 750ml",200,350);
+            inventario += new Bebida("Martini", 70, 600);
+            inventario += new Bebida("Manhattan", 80, 700);
+            inventario += new Bebida("Negroni", 80, 800);
+
+            inventario += new Comida("Papas cheddar",150,700);
+            inventario += new Comida("Rabas",100,1200);
+            inventario += new Comida("Bastones de muzzarella", 100, 750);
+            inventario += new Comida("Quesadillas", 120, 900);
+            inventario += new Comida("Tabla de quesos", 200, 900);
+            inventario += new Comida("Tabla de fiambres", 100, 2200);
+            inventario += new Comida("Ensalada Cesar", 200, 750);
+            inventario += new Comida("Hamburguesa completa", 180, 900);
+
         }
     }
 }
