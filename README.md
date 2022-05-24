@@ -39,7 +39,7 @@ La seccion usuarios es una seccion unica para el usuario Admin para que pueda ag
 ## Sobre los temas pedidos
 
 ### Herencia
-
+Hubo herencia de metodos, propiedades y atributos
 
 ### Sobrecargas
 Se sobrecargaron metodos, se sobrecargaron operadores y constructores
@@ -64,7 +64,10 @@ Se utilizaron por lo menos dos colecciones distintas
 
 
 ### Enumerados
-no hubo enumerados :(
+Si se usaron enumerados :)
+
+![image](https://user-images.githubusercontent.com/70229188/170093358-585484a3-6b2a-4a25-b1ca-0be6777c3841.png)
+
 
 ### Formularios Modal
 Se usaron formularios modal
