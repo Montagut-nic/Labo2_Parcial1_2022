@@ -13,6 +13,7 @@ namespace Entidades
         public List<Producto> productosPedidos;
         private double total;
         public bool usaEstacionamiento;
+        public MetodoDePago metodo;
 
         public Pedido()
         {
@@ -20,6 +21,7 @@ namespace Entidades
             nroOrden = nroUltimaOrden+1;
             nroUltimaOrden = nroOrden;
             usaEstacionamiento = false;
+            metodo = MetodoDePago.NoSeleccionado;
         }
 
         public double Total 
@@ -117,6 +119,15 @@ namespace Entidades
                 }
             }
             return pedido;
+        }
+
+        public enum MetodoDePago
+        {
+            NoSeleccionado,
+            Credito,
+            Debito,
+            MercadoPago,
+            Efectivo
         }
     }
 }

@@ -29,6 +29,27 @@ namespace LesUTN
             {
                 esMesa = true;
             }
+            switch (this.pedido.metodo)
+            {
+                case Pedido.MetodoDePago.NoSeleccionado:
+                    rbtCredito.Checked = false;
+                    rbtDebito.Checked = false;
+                    rbtEfectivo.Checked = false;
+                    rbtMercadopago.Checked = false;
+                    break;
+                case Pedido.MetodoDePago.Debito:
+                    rbtDebito.Checked = true;
+                    break;
+                case Pedido.MetodoDePago.Credito:
+                    rbtCredito.Checked = true;
+                    break;
+                case Pedido.MetodoDePago.Efectivo:
+                    rbtEfectivo.Checked = true;
+                    break;
+                case Pedido.MetodoDePago.MercadoPago:
+                    rbtMercadopago.Checked = true;
+                    break;
+            }
             
         }
 
@@ -78,6 +99,7 @@ namespace LesUTN
                 sb.AppendLine("Recargo del 10% para tarjetas de credito");
             }
             sb.AppendLine($"Total: ${total}");
+            sb.AppendLine($"Metodo de pago: {pedido.metodo}");
             sb.AppendLine("-----------------------------------------------------\n");
             return sb.ToString();
         }
@@ -102,7 +124,7 @@ namespace LesUTN
             total = 0;
             pedido.CalcularTotal(chbEstacionamiento.Checked);
             total = pedido.Total;
-            if (rbtCredito.Checked == true)
+            if (pedido.metodo == Pedido.MetodoDePago.Credito)
             {
                 total += total * .10;
             }
@@ -185,13 +207,13 @@ namespace LesUTN
             }
             else
             {
-                btnCobrar.Enabled = false;
                 btnQuitar.Enabled = false;
             }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            labelPedido.Tag = pedido;
             Close();
         }
 
@@ -201,6 +223,21 @@ namespace LesUTN
         }
         private void rbtMetodoDePago_CheckedChanged(object sender, EventArgs e)
         {
+            switch (((RadioButton)sender).Text)
+            {
+                case "Mercadopago":
+                    pedido.metodo = Pedido.MetodoDePago.MercadoPago;
+                    break;
+                case "Debito":
+                    pedido.metodo = Pedido.MetodoDePago.Debito;
+                    break;
+                case "Credito":
+                    pedido.metodo = Pedido.MetodoDePago.Credito;
+                    break;
+                case "Efectivo":
+                    pedido.metodo = Pedido.MetodoDePago.Efectivo;
+                    break;
+            }
             SetearTotal();
             btnCobrar.Enabled = true;
         }
