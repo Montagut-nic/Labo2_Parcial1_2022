@@ -55,20 +55,6 @@ namespace Entidades
             return !(usuarioA == usuarioB);
         }
 
-        public override bool Equals(object obj)
-        {
-            return obj is Usuario usuario &&
-                   Nombre == usuario.Nombre &&
-                   Password == usuario.Password &&
-                   obj.GetType() == usuario.GetType() &&
-                   obj != null;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(nombre,Nombre, Password, password);
-        }
-
         public override string ToString()
         {
             return Nombre;

@@ -101,18 +101,6 @@ namespace Entidades
             return sb.ToString();
         }
 
-        public override bool Equals(object obj)
-        {
-            return obj is Producto producto &&
-                   Nombre == producto.Nombre &&
-                   obj.GetType() == producto.GetType() &&
-                   obj != null;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(cantidad, nombre, valor, Nombre, Cantidad, Valor);
-        }
 
         public override string ToString()
         {
