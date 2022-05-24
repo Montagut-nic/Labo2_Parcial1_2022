@@ -81,7 +81,7 @@ Se usaron formularios modal
 Se utilizaron clases estaticas, ver colecciones
 
 ### Polimorfismo
-Se utilizaron clases abstractas
+Se utilizaron clases abstractas, no se usaron metodos virtual o abstract
 
 ![image](https://user-images.githubusercontent.com/70229188/168897790-b92432f2-7409-44a2-96f7-63f750b13f5d.png)
 
