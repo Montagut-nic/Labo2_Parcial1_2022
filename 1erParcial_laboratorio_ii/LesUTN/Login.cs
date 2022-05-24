@@ -44,7 +44,7 @@ namespace LesUTN
                 txbNombre.Text = string.Empty;
                 txbContrasena.Text = string.Empty;
                 lblDatosIncorrectos.Visible = false;
-                SoundPlayer sonidoLogueo = new SoundPlayer(@"..\..\..\..\LesUTN\Resources\efectoSonidoLogueo.wav");
+                SoundPlayer sonidoLogueo = new SoundPlayer(Properties.Resources.efectoSonidoLogueo);
                 sonidoLogueo.Play();
                 this.Hide();
                 MenuPrincipal menu = new MenuPrincipal(); 

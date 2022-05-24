@@ -90,7 +90,7 @@ namespace LesUTN
                 labelPedido.Tag = null;
                 labelPedido.BackColor= Color.LawnGreen;
                 labelPedido.Text = "Libre";
-                SoundPlayer sonidoCobro = new SoundPlayer(@"..\..\..\..\LesUTN\Resources\efectoSonidoCobro.wav");
+                SoundPlayer sonidoCobro = new SoundPlayer(Properties.Resources.efectoSonidoCobro);
                 sonidoCobro.Play();
                 Close();
             }

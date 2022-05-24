@@ -301,7 +301,12 @@ namespace LesUTN
 
         private void btnGuardarFacturaciones_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(@"..\..\..\..\LesUTN\Resources\MisFacturaciones.txt",rtbFacturaciones.Text);
+            StringBuilder sb = new StringBuilder();
+            sb.Append("./Facturaciones");
+            sb.Append(DateTime.Today.Month+"-"+DateTime.Today.Year);
+            sb.Append(".txt");
+            File.WriteAllText(sb.ToString(),rtbFacturaciones.Text);
+            MessageBox.Show("Se han guardado las facturaciones del mes");
         }
 
         private void btnAgregarNuevoUsuario_Click(object sender, EventArgs e)
